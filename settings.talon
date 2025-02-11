@@ -30,17 +30,19 @@ settings():
     # Set the maximum acceleration factor when scrolling continuously. 1=constant speed/no acceleration.
     user.mouse_continuous_scroll_acceleration = 1
 
+    # I've turned off all pop commands since I think false detections were
+    # messing with how eye tracking behaved
     # If `true`, stop continuous scroll/gaze scroll with a pop
-    user.mouse_enable_pop_stops_scroll = true
+    user.mouse_enable_pop_stops_scroll = false
 
     # If `true`, stop mouse drag with a pop
-    user.mouse_enable_pop_stops_drag = true
+    user.mouse_enable_pop_stops_drag = false
 
     # Choose how pop click should work in 'control mouse' mode
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
-    user.mouse_enable_pop_click = 1
+    user.mouse_enable_pop_click = 0
 
     # If `true`, use a hissing noise to scroll continuously
     user.mouse_enable_hiss_scroll = false
