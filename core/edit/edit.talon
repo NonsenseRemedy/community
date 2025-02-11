@@ -76,7 +76,7 @@ padding: user.insert_between(" ", " ")
 
 # Undo/redo
 # Nope is from Pokey Rule
-(undo that | nope | blast): edit.undo()
+(undo that | nope): edit.undo()
 redo that: edit.redo()
 
 # Save
