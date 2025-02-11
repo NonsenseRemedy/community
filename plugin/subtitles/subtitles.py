@@ -58,6 +58,11 @@ setting_timeout_max = setting(
     int,
     "Maximum time for a subtitle to show in ms",
 )
+setting_x = setting(
+    "x",
+    float,
+    "Percentage of screen width to show subtitle at. 0=left, 1=right",
+)
 setting_y = setting(
     "y",
     float,
@@ -108,7 +113,8 @@ def on_draw(c: SkiaCanvas, screen: ui.Screen, text: str):
     scale = screen.scale if app.platform != "mac" else 1
     size = setting_size() * scale
     rect = set_text_size_and_get_rect(c, size, text)
-    x = c.rect.center.x - rect.center.x
+    # x = c.rect.center.x - rect.center.x
+    x = setting_x()
     # Clamp coordinate to make sure entire text is visible
     y = max(
         min(
