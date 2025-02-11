@@ -290,3 +290,12 @@ preview markdown: user.vscode("markdown.showPreview")
 
 # stolen from Pokey Rule
 doc run pie: user.vscode("python.execInTerminal")
+disk:
+    edit.save()
+    sleep(150ms)
+    user.vscode("hideSuggestWidget")
+disclose:
+    key(esc:5)
+    edit.save()
+    sleep(150ms)
+    key(cmd-w)
