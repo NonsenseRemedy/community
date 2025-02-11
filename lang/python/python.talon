@@ -28,6 +28,8 @@ settings():
 
 #python-specific grammars
 dunder in it: "__init__"
+dunder name: "__name__"
+dunder main: "__main__"
 state (def | deaf | deft): "def "
 state try: "try:\n"
 state except: "except "
