@@ -22,6 +22,9 @@ git show head$: "git show HEAD\n"
 git diff$: "git diff\n"
 git diff (cached | cashed)$: "git diff --cached\n"
 
+git log$: "git log --graph -300 --all --color --oneline --decorate \n"
+git log long$: "git log\n"
+
 # Convenience
 git clone clipboard:
     insert("git clone ")
