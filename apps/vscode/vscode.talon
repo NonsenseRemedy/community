@@ -299,3 +299,7 @@ disclose:
     edit.save()
     sleep(150ms)
     key(cmd-w)
+
+# my first vscode-specific attempt at resizing splits
+split grow: user.vscode("workbench.action.increaseViewSize")
+split shrink: user.vscode("workbench.action.decreaseViewSize")
