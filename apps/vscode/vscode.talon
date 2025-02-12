@@ -303,3 +303,5 @@ disclose:
 # my first vscode-specific attempt at resizing splits
 split grow: user.vscode("workbench.action.increaseViewSize")
 split shrink: user.vscode("workbench.action.decreaseViewSize")
+
+panel max: user.vscode("workbench.action.toggleMaximizedPanel")
