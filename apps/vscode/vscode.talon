@@ -26,6 +26,11 @@ bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+# from Pokey Rule
+side dog: user.vscode("workbench.action.toggleSidebarVisibility")
+search next: user.vscode("search.action.focusNextSearchResult")
+search last: user.vscode("search.action.focusPreviousSearchResult")
+
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -45,6 +50,9 @@ panel problems: user.vscode("workbench.panel.markers.view.focus")
 panel switch: user.vscode("workbench.action.togglePanel")
 panel terminal: user.vscode("workbench.action.terminal.focus")
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
+# from Pokey Rule
+low dog: user.vscode("workbench.action.togglePanel")
+
 
 # Settings
 show settings: user.vscode("workbench.action.openGlobalSettings")
@@ -141,6 +149,7 @@ go marks:
     user.deprecate_command("2023-06-06", "go marks", "bar marks")
     user.vscode("workbench.view.extension.bookmarks")
 toggle mark: user.vscode("bookmarks.toggle")
+mark dog: user.vscode("bookmarks.toggle")
 mark next: user.vscode("bookmarks.jumpToNext")
 mark last: user.vscode("bookmarks.jumpToPrevious")
 
@@ -241,6 +250,9 @@ terminal split: user.vscode("workbench.action.terminal.split")
 terminal zoom: user.vscode("workbench.action.toggleMaximizedPanel")
 terminal trash: user.vscode("workbench.action.terminal.kill")
 terminal toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
+# from Pokey Rule
+term dog: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
+
 terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
 terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
 terminal <number_small>: user.vscode_terminal(number_small)
@@ -304,4 +316,4 @@ disclose:
 split grow: user.vscode("workbench.action.increaseViewSize")
 split shrink: user.vscode("workbench.action.decreaseViewSize")
 
-panel max: user.vscode("workbench.action.toggleMaximizedPanel")
+[panel | low | term] max: user.vscode("workbench.action.toggleMaximizedPanel")
