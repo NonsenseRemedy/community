@@ -36,6 +36,43 @@ docstring_fields = {
 mod.list("python_docstring_fields", desc="python docstring fields")
 ctx.lists["user.python_docstring_fields"] = docstring_fields
 
+ ctx.lists["user.code_type"] = {
+     "boolean": "bool",
+    "bool": "bool",
+     "integer": "int",
+    "int": "int",
+     "string": "str",
+     "none": "None",
+     "dick": "Dict",
+     "float": "float",
+     "any": "Any",
+     "tuple": "Tuple",
+     "union": "UnionAny",
+     "iterable": "Iterable",
+     "vector": "Vector",
+     "bytes": "bytes",
+     "sequence": "Sequence",
+     "callable": "Callable",
+     "list": "List",
+     "no return": "NoReturn",
+ }
+
+ ctx.lists["user.code_keyword"] = {
+     "assert": "assert ",
+     "break": "break",
+     "continue": "continue",
+     "class": "class ",
+     "return": "return ",
+     "import": "import ",
+     "null": "None",
+     "none": "None",
+     "pass": "pass",
+     "true": "True",
+     "false": "False",
+     "yield": "yield ",
+     "from": "from ",
+ }
+
 exception_list = [
     "BaseException",
     "SystemExit",

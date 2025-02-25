@@ -37,6 +37,7 @@ state raise: "raise "
 self taught: "self."
 pie test: "pytest"
 state past: "pass"
+shebang: "#! /usr/bin/env python3"
 
 [state] raise {user.python_exception}:
     user.insert_between("raise {python_exception}(", ")")
