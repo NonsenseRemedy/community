@@ -83,10 +83,18 @@ class Actions:
         editor_app = get_editor_app()
         actions.sleep("200ms")
         selected_text = actions.edit.selected_text()
-        actions.sleep("400")
+        actions.sleep("400ms")
         actions.user.switcher_focus_app(editor_app)
         # Wait additional time for talon context to update.
         actions.sleep("400ms")
+        selected_text = actions.edit.selected_text()
+        # If I put a sleep here, we never switch to code
+        actions.sleep("100ms")
+        actions.user.switcher_focus_app(editor_app)
+        # Wait additional time for talon context to update.
+        # this was defaulted to two hundred, but I'm playing with
+        # extending it so that we actually get a new tab with a paste
+        actions.sleep("200ms")
         actions.app.tab_open()
         if selected_text != "":
             actions.user.paste(selected_text)
