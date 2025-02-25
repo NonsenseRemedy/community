@@ -1,5 +1,9 @@
 tag: terminal
 -
+tag(): user.bash
+tag(): user.git
+tag(): user.generic_unix_shell
+tag(): user.readline
 
 settings():
     # pasting into terminal emulators may trigger "executable code" warnings
