@@ -7,6 +7,7 @@ mod = Module()
 mod.tag("code_operators_array", desc="Tag for enabling array operator commands")
 mod.tag("code_operators_assignment", desc="Tag for enabling assignment commands")
 mod.tag("code_operators_bitwise", desc="Tag for enabling bitwise operator commands")
+mod.tag("code_operators_identity", desc="Tag for enabling identity operator commands")
 mod.tag(
     "code_operators_lambda", desc="Tag for enabling commands for anonymous functions"
 )
