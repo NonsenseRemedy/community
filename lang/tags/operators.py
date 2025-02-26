@@ -16,6 +16,9 @@ mod.tag("code_operators_pointer", desc="Tag for enabling pointer operator comman
 mod.list("code_operators_array", desc="List of code operators for arrays")
 mod.list("code_operators_assignment", desc="List of code operators for assignments")
 mod.list("code_operators_bitwise", desc="List of code operators for bitwise operations")
+mod.list(
+    "code_operators_identity", desc="List of code operators for identity operations"
+)
 mod.list("code_operators_lambda", desc="List of code operators for anonymous functions")
 mod.list(
     "code_operators_math",
@@ -57,6 +60,10 @@ class Operators(TypedDict, total=False):
     BITWISE_EXCLUSIVE_OR: Operator
     BITWISE_LEFT_SHIFT: Operator
     BITWISE_RIGHT_SHIFT: Operator
+
+    # code_operators_identity
+    IDENTITY_IS: Operator
+    IDENTITY_IS_NOT: Operator
 
     # code_operators_lambda
     LAMBDA: Operator
@@ -157,6 +164,12 @@ def operators_fallback(identifier: str) -> None:
             actions.user.code_operator_bitwise_left_shift()
         case "BITWISE_RIGHT_SHIFT":
             actions.user.code_operator_bitwise_right_shift()
+
+        # code_operators_identity
+        case "IDENTITY_IS":
+            actions.user.code_operator_identity_is()
+        case "IDENTITY_IS_NOT":
+            actions.user.code_operator_identity_is_not()
 
         # code_operators_lambda
         case "LAMBDA":

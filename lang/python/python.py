@@ -170,6 +170,9 @@ operators = Operators(
     BITWISE_EXCLUSIVE_OR=" ^ ",
     BITWISE_LEFT_SHIFT=" << ",
     BITWISE_RIGHT_SHIFT=" >> ",
+    # code_operators_identity
+    IDENTITY_IS=" is ",
+    IDENTITY_IS_NOT=" is not ",
     # code_operators_lambda
     LAMBDA=lambda: actions.user.insert_between("lambda ", ": "),
     # code_operators_math
