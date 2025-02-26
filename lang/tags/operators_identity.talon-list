@@ -1,0 +1,7 @@
+list: user.code_operators_identity
+tag: user.code_operators_identity
+-
+
+# Identity
+is: IDENTITY_IS
+is not: IDENTITY_IS_NOT
