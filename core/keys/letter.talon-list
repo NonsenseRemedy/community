@@ -4,31 +4,57 @@ list: user.letter
 # for common alternative spoken forms for letters, visit
 # https://talon.wiki/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy#collected-alternatives-to-the-default-alphabet
 air: a
+alpha: A
 bat: b
+bravo: B
 cap: c
+charlie: C
 drum: d
+delta: D
 each: e
+echo: E
 fine: f
+foxtrot: F
 gust: g
+golf: G
 harp: h
+hotel: H
 sit: i
+india: I
 # originally jury
 June: j
+juliet: J
 # originally crunch
 kid: k
+kilo: K
 look: l
+lima: L
 made: m
+mike: M
 near: n
+November: N
 odd: o
+oscar: O
 pit: p
+papa: P
 # originally quench
 queen: q
+Quebec: Q
 red: r
+romeo: R
 sun: s
+sierra: S
 trap: t
+tango: T
 urge: u
+uniform: U
 vest: v
+victor: V
 whale: w
+whiskey: W
 plex: x
+xray: X
 yank: y
+yankee: Y
 zip: z
+zulu: Z
