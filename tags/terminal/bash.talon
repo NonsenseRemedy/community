@@ -9,10 +9,16 @@ param:                      " --"
 param <user.prose>:         " --{prose}"
 
 dir:                        "cd "
+# LEL Added 6 March 2025
+dir up:                     "cd ..\n"
 dir <user.prose>$:          "cd {prose}"
 dir <user.letters>$:        "cd {letters}"
 dir <user.prose> tab$:      "cd {prose}\t"
 dir <user.letters> tab$:    "cd {letters}\t"
+
+# LEL Added 6 March 2025, trying to make git add patch less annoying
+yes:                        "y\n"
+no:                         "n\n"
 
 list:                       "ls\n"
 list all:                   "ls -a\n"
