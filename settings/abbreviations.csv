@@ -332,6 +332,7 @@ reqs,requests
 rsrcs,resources
 resp,response
 res,result
+res,resolution
 ret,return
 rev,revision
 rnd,round
