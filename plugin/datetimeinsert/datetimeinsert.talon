@@ -1,7 +1,14 @@
+# LEL 09 March 2025: added "time" and long versions of dates
+
 date insert: insert(user.time_format("%Y-%m-%d"))
+date insert long: insert(user.time_format("%d %B %Y"))
+date insert long UTC: insert(user.time_format_utc("%d %B %Y"))
 date insert UTC: insert(user.time_format_utc("%Y-%m-%d"))
-timestamp insert: insert(user.time_format("%Y-%m-%d %H:%M:%S"))
-timestamp insert high resolution: insert(user.time_format("%Y-%m-%d %H:%M:%S.%f"))
-timestamp insert UTC: insert(user.time_format_utc("%Y-%m-%d %H:%M:%S"))
-timestamp insert UTC high resolution:
-    insert(user.time_format_utc("%Y-%m-%d %H:%M:%S.%f"))
+(timestamp | datetime) insert: insert(user.time_format("%Y-%m-%d %H:%M:%S"))
+(timestamp | datetime) insert high (resolution | res): insert(user.time_format("%Y-%m-%d %H:%M:%S.%f"))
+(timestamp | datetime) insert UTC: insert(user.time_format_utc("%Y-%m-%d %H:%M:%S"))
+(timestamp | datetime) insert high (resolution | res) UTC: insert(user.time_format_utc("%Y-%m-%d %H:%M:%S.%f"))
+time insert: insert(user.time_format("%H:%M:%S"))
+time insert UTC: insert(user.time_format_utc("%H:%M:%S"))
+time insert high (resolution | res): insert(user.time_format("%H:%M:%S.%f"))
+time insert high (resolution | res) UTC: insert(user.time_format_utc("%H:%M:%S.%f"))
