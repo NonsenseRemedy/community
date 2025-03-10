@@ -9,8 +9,10 @@ param:                      " --"
 param <user.prose>:         " --{prose}"
 
 dir:                        "cd "
-# LEL Added 6 March 2025
-dir up:                     "cd ..\n"
+# LEL Added 6 March 2025; "\n" doesn't work for a newline on zsh, so use explicit key
+dir up:
+    "cd .."
+    key(enter)
 dir <user.prose>$:          "cd {prose}"
 dir <user.letters>$:        "cd {letters}"
 dir <user.prose> tab$:      "cd {prose}\t"
