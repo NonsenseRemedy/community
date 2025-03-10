@@ -5,6 +5,8 @@ tag: browser
 
 # Really, these are latex snippets hackily done to work in a website
 
+# TODO: should this be a talon list of latex commands? (section, subsection, etc...)
+
 new section:
     insert("\\section{}")
     key(left)
@@ -39,3 +41,31 @@ begin itemize:
 new item:
     edit.line_insert_down()
     insert("\\item ")
+
+
+###############
+# overleaf keyboard shortcuts
+#
+# (TODO: this may need to made operating system specific)
+###############
+
+comment that:
+    key(cmd-/)
+
+indent that:
+    key(tab)
+
+dedent that:
+    key(shift-tab)
+
+
+go to line:
+    key(cmd-shift-l)
+
+# # I can't get this to work...
+# go to line <user.number>:
+    # key(cmd-shift-l)
+    # sleep(100ms)
+    # insert("{number}")
+    # sleep(200ms)
+    # key(enter)
