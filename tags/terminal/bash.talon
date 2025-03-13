@@ -2,6 +2,10 @@ tag: user.bash
 -
 # bash functions taken from Andreas's repo, since I liked them better than the default community ones, particularly because they don't require the core keyword, and they also include the \n by default in most commands
 
+source bashrc:
+    "source ~/.bashrc"
+    key(enter)
+
 flag:                       " -"
 flag <user.letters>:        " -{letters} "
 
@@ -9,7 +13,7 @@ param:                      " --"
 param <user.prose>:         " --{prose}"
 
 dir:                        "cd "
-# LEL Added 6 March 2025; "\n" doesn't work for a newline on zsh, so use explicit key
+# LEL Added 6 March 2025; "\n" doesn't work for a newline on zsh, so use explicit key. or maybe it sometimes works? I'm confused...
 dir up:
     "cd .."
     key(enter)
