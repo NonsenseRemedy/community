@@ -52,7 +52,20 @@ rostopic echo [count <number_small>] [<user.rostopic_echo_args>] paste:
 # rostopic info doesn't have many options, so no need to use talon lists
 
 rostopic info:
-    "rostopic infill "
+    "rostopic info "
+
+rostopic info (this | that):
+    text = edit.selected_text()
+    "rostopic info {text}"
+    key(enter)
+
+rostopic info paste:
+    "rostopic info {clip.text()}"
+    key(enter)
+
+#############################################
+#############################################
+# ROSTOPIC list
 
 rostopic list help:
     "rostopic list --help"
