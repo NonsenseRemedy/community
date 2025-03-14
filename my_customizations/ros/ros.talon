@@ -38,12 +38,14 @@ rostopic echo [count <number_small>] [<user.rostopic_echo_args>] (this | that):
     args = rostopic_echo_args or ""
     text = edit.selected_text()
     "rostopic echo{count}{args} {text}"
+    key(enter)
 
 rostopic echo [count <number_small>] [<user.rostopic_echo_args>] paste:
     count = ""
     if number_small or false: count = " -n {number_small} "
     args = rostopic_echo_args or ""
     "rostopic echo{count}{args} {clip.text()}"
+    key(enter)
 
 #############################################
 #############################################
@@ -53,6 +55,10 @@ rostopic echo [count <number_small>] [<user.rostopic_echo_args>] paste:
 
 rostopic info:
     "rostopic info "
+
+rostopic info --help:
+    "rostopic info help"
+    key(enter)
 
 rostopic info (this | that):
     text = edit.selected_text()
@@ -65,18 +71,13 @@ rostopic info paste:
 
 #############################################
 #############################################
-# ROSTOPIC list
+# ROSTOPIC LIST
 
-rostopic list help:
-    "rostopic list --help"
+rostopic list [<user.rostopic_list_args>]:
+    args = rostopic_list_args or ""
+    "rostopic list{args}"
     key(enter)
 
-rostopic list:
-    "rostopic list "
-
-rostopic list all:
-    "rostopic list "
-    key(enter)
-
-rostopic list grep <user.text>:
-    insert('rostopic list | grep -i "{user.text}"')
+rostopic list [<user.rostopic_list_args>] grep <user.text>:
+    args = rostopic_list_args or ""
+    insert('rostopic list{args} | grep -i "{user.text}"')
