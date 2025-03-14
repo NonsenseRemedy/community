@@ -1,0 +1,12 @@
+list: user.rostopic_echo_args
+-
+
+all: --all
+bag: --bag=
+clear: --clear
+filter: --filter
+help: --help
+no array: --noarr
+no string: --nostr
+offset: --offset
+plot: -p
