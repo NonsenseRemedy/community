@@ -29,6 +29,7 @@ dvc
 gee lunch: Glunch
 graal
 graals
+grep
 grepping
 hackily
 MacOS
@@ -47,7 +48,10 @@ Rina
 "Rina's"
 rondel
 rondels
+ross: ROS
+ross bag: rosbag
 ross core: roscore
+ross topic: rostopic
 Shuai
 Shuai's
 Schack

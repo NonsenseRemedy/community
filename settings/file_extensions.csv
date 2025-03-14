@@ -50,3 +50,6 @@ File extension,Name
 .class,dot class
 .log,dot log
 .git,dot get
+# my extensions (kept separate from now on so I can alphabetize them)
+.bag,dot bag
+.msg,dot message
