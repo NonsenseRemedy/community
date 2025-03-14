@@ -21,6 +21,10 @@ dir <user.prose>$:          "cd {prose}"
 dir <user.letters>$:        "cd {letters}"
 dir <user.prose> tab$:      "cd {prose}\t"
 dir <user.letters> tab$:    "cd {letters}\t"
+# LEL Added 13 March 2025
+dir last:
+    "cd -"
+    key(enter)
 
 # LEL Added 6 March 2025, trying to make git add patch less annoying
 yes:                        "y\n"
