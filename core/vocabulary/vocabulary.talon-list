@@ -51,6 +51,7 @@ rondels
 ross: ROS
 ross bag: rosbag
 ross core: roscore
+ROS time: rostime
 ross topic: rostopic
 Shuai
 Shuai's
