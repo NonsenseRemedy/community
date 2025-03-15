@@ -5,7 +5,7 @@ roscore:
     "roscore"
     key(enter)
 
-# NYI rostopic commands: bw, delay, find, hz, pub, type
+# NYI rostopic commands: bw, delay, pub
 #############################################
 #############################################
 # ROSTOPIC ECHO
@@ -131,3 +131,27 @@ rostopic list [<user.rostopic_list_args>]:
 rostopic list [<user.rostopic_list_args>] grep <user.text>:
     args = rostopic_list_args or ""
     insert('rostopic list{args} | grep -i "{user.text}"')
+
+#############################################
+#############################################
+# ROSTOPIC PUB
+
+#############################################
+#############################################
+# ROSTOPIC TYPE
+
+rostopic type:
+    "rostopic type "
+
+rostopic type help:
+    "rostopic type --help"
+    key(enter)
+
+rostopic type (this | that):
+    text = edit.selected_text()
+    "rostopic type {text}"
+    key(enter)
+
+rostopic type paste:
+    "rostopic type {clip.text()}"
+    key(enter)
