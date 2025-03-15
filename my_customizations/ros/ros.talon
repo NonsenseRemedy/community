@@ -47,6 +47,28 @@ rostopic echo [count <number_small>] [<user.rostopic_echo_args>] paste:
     "rostopic echo{count}{args} {clip.text()}"
     key(enter)
 
+
+#############################################
+#############################################
+# ROSTOPIC FIND
+
+rostopic find:
+    "rostopic find "
+
+rostopic find help:
+    "rostopic find --help"
+    key(enter)
+
+rostopic find (this | that):
+    text = edit.selected_text()
+    "rostopic find {text}"
+    key(enter)
+
+rostopic find paste:
+    "rostopic find {clip.text()}"
+    key(enter)
+
+
 #############################################
 #############################################
 # ROSTOPIC HERTZ
@@ -84,8 +106,8 @@ rostopic hertz [window <number_small>] [<user.rostopic_hz_args>] paste:
 rostopic info:
     "rostopic info "
 
-rostopic info --help:
-    "rostopic info help"
+rostopic info help:
+    "rostopic info --help"
     key(enter)
 
 rostopic info (this | that):
