@@ -5,7 +5,7 @@ roscore:
     "roscore"
     key(enter)
 
-# NYI rostopic commands: delay, pub
+# NYI rostopic commands: pub
 
 #############################################
 #############################################
@@ -31,6 +31,32 @@ rostopic bandwidth [window <number_small>] paste:
     window = ""
     text = edit.selected_text()
     "rostopic bw{window} {clip.text()}"
+    key(enter)
+
+
+#############################################
+#############################################
+# ROSTOPIC DELAY
+
+rostopic delay [window <number_small>] [<user.rostopic_delay_args>]:
+    window = ""
+    if number_small or false: window = " -w {number_small} "
+    args = rostopic_delay_args or ""
+    "rostopic delay {window}{args}"
+
+rostopic delay [window <number_small>] [<user.rostopic_delay_args>] (this | that):
+    window = ""
+    if number_small or false: window = " -w {number_small} "
+    args = rostopic_delay_args or ""
+    text = edit.selected_text()
+    "rostopic delay{window}{args} {text}"
+    key(enter)
+
+rostopic delay [window <number_small>] [<user.rostopic_delay_args>] paste:
+    window = ""
+    if number_small or false: window = " -w {number_small} "
+    args = rostopic_delay_args or ""
+    "rostopic delay{window}{args} {clip.text()}"
     key(enter)
 
 

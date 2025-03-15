@@ -1,0 +1,13 @@
+list: user.rostopic_list_args
+-
+
+bag: --bag=
+help: --help
+host: --host
+verbose: --verbose
+pub: -p
+publisher: -p
+publishers: -p
+sub: -s
+subscriber: -s
+subscribers: -s
