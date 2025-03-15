@@ -49,6 +49,34 @@ rostopic echo [count <number_small>] [<user.rostopic_echo_args>] paste:
 
 #############################################
 #############################################
+# ROSTOPIC HERTZ
+#
+# --window: needs to be said first, since options with arguments are handled differently
+# --filter: needs to be said last, since we don't support inserting the filter expression
+
+rostopic hertz [window <number_small>] [<user.rostopic_hz_args>]:
+    window = ""
+    if number_small or false: window = " -w {number_small} "
+    args = rostopic_hz_args or ""
+    "rostopic hz {window}{args}"
+
+rostopic hertz [window <number_small>] [<user.rostopic_hz_args>] (this | that):
+    window = ""
+    if number_small or false: window = " -w {number_small} "
+    args = rostopic_hz_args or ""
+    text = edit.selected_text()
+    "rostopic hz {window}{args} {text}"
+    key(enter)
+
+rostopic hertz [window <number_small>] [<user.rostopic_hz_args>] paste:
+    window = ""
+    if number_small or false: window = " -w {number_small} "
+    args = rostopic_hz_args or ""
+    "rostopic hz {window}{args} {clip.text()}"
+    key(enter)
+
+#############################################
+#############################################
 # ROSTOPIC INFO
 #
 # rostopic info doesn't have many options, so no need to use talon lists
