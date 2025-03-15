@@ -188,6 +188,29 @@ rostopic list [<user.rostopic_list_args>] grep <user.text>:
 #############################################
 #############################################
 # ROSTOPIC PUB
+#
+# Given how much editing has to happen to fill out the fields in a message,  I'm wondering whether this would be better to do an an ipython notebook,  so I could use cursorless to edit it.
+
+rostopic pub [rate <number_small>] [<user.rostopic_pub_args>]:
+    rate = ""
+    if number_small or false: rate = " -r {number_small} "
+    args = rostopic_pub_args or ""
+    "rostopic pub {rate}{args}"
+
+rostopic pub [rate <number_small>] [<user.rostopic_pub_args>] (this | that):
+    rate = ""
+    if number_small or false: rate = " -r {number_small} "
+    args = rostopic_pub_args or ""
+    text = edit.selected_text()
+    "rostopic pub{rate}{args} {text} "
+
+rostopic pub [rate <number_small>] [<user.rostopic_pub_args>] paste:
+    rate = ""
+    if number_small or false: rate = " -r {number_small} "
+    args = rostopic_pub_args or ""
+    "rostopic pub{rate}{args} {clip.text()} "
+
+
 
 #############################################
 #############################################
