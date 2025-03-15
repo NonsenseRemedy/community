@@ -5,7 +5,36 @@ roscore:
     "roscore"
     key(enter)
 
-# NYI rostopic commands: bw, delay, pub
+# NYI rostopic commands: delay, pub
+
+#############################################
+#############################################
+# ROSTOPIC BW
+
+rostopic bandwidth help:
+    "rostopic bw --help"
+    key(enter)
+
+rostopic bandwidth [window <number_small>]:
+    window = ""
+    if number_small or false: window = " -w {number_small} "
+    "rostopic bw {window}"
+
+rostopic bandwidth [window <number_small>] (this | that):
+    window = ""
+    if number_small or false: window = " -w {number_small} "
+    text = edit.selected_text()
+    "rostopic bw{window} {text}"
+    key(enter)
+
+rostopic bandwidth [window <number_small>] paste:
+    window = ""
+    text = edit.selected_text()
+    "rostopic bw{window} {clip.text()}"
+    key(enter)
+
+
+
 #############################################
 #############################################
 # ROSTOPIC ECHO
