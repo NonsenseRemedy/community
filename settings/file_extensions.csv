@@ -52,4 +52,5 @@ File extension,Name
 .git,dot get
 # my extensions (kept separate from now on so I can alphabetize them)
 .bag,dot bag
+.gov,dot guv
 .msg,dot message
