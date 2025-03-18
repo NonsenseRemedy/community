@@ -109,7 +109,14 @@ ssh: "ssh "
 # fc last command in editor.
 
 talon user update:
-    "find {user.talon_user()} -type d -name .git -print -execdir git pull --ff-only \\;\n"
-    "git -C {user.user_home()}/repositories/cursorless-talon pull\n"
+    "find {path.talon_user()} -type d -name .git -print -execdir git pull --ff-only \\;\n"
+    "find {path.talon_user()} -type d -name .git -print -execdir git fetch origin main \\;\n"
+    # this is a brute force way to deal with talon-filetree-commands, which uses master and not main
+    "find {path.talon_user()} -type d -name .git -print -execdir git fetch origin master \\;\n"
+    # todo: figure out how to detect if I need to rebase to origin/HEAD
+    # "find {path.talon_user()} -type d -name .git \( -print -execdir git merge-base --is-ancestor origin/HEAD HEAD \; -o -print -execdir echo "merge `pwd`\" \; \) "
+    # "find {path.talon_user()} -type d -name .git -print -execdir git merge-base --is-ancestor origin/HEAD HEAD ; if [ $? -ne 1 ] \\; then echo \"merge `pwd`\" \\; fi \\; \n"
+
+    # "git -C {path.user_home()}/repositories/cursorless-talon pull\n"
 
 watch talon log: "tail -f {user.talon_home()}/talon.log\n"
