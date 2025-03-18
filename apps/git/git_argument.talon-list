@@ -62,9 +62,27 @@ combined: -c
 deep: -d
 very verbose: -vv
 HEAD
+upstream
+
+####################
+# LEL added/modified 18 March 2025
+# rather than creating a more generic capture, I am going to try simply
+# enumerating my most common remotes and branches.
+
+# branches:
 main
 master
+nonsense
+
+# remotes:
+github
+github main
+nonsense
 origin
-upstream
-origin main: origin/main
-origin master: origin/master
+origin main
+origin slash main: origin/main
+origin master
+origin slash master: origin/master
+private
+private main
+private nonsense
