@@ -149,3 +149,4 @@ settings():
 # defined in window_layout.talon
 # tag(): user.experimental_window_layout
 tag(): user.cursorless_use_community_snippets
+tag(): user.i3wm
