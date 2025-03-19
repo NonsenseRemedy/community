@@ -1,5 +1,15 @@
 tag: user.bash
 -
+
+manip:
+    "manip"
+    key(enter)
+
+# probably-temporary until I do a more thorough catkin command set
+catkin build:
+    "catkin build"
+    key(enter)
+
 # bash voice commands specifically for use at work
 export trisect dvc:
     "trisect_dvc"
