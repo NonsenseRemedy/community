@@ -17,6 +17,9 @@ dir: "cd "
 dir up:
     "cd .."
     key(enter)
+dir home:
+    "cd"
+    key(enter)
 dir <user.prose>$: "cd {prose}"
 dir <user.letters>$: "cd {letters}"
 dir <user.prose> tab$: "cd {prose}\t"
