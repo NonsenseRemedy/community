@@ -53,4 +53,5 @@ File extension,Name
 # my extensions (kept separate from now on so I can alphabetize them)
 .bag,dot bag
 .gov,dot guv
+.ipynb,dot eye pie notebook
 .msg,dot message
