@@ -10,6 +10,10 @@ catkin build:
     "catkin build"
     key(enter)
 
+view frames:
+    "rosrun tf2_tools view_frames.py"
+    key(enter)
+
 # bash voice commands specifically for use at work
 # this exports the AWS keys to access the trisect data
 export trisect dvc:
