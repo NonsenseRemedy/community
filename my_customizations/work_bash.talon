@@ -11,8 +11,17 @@ catkin build:
     key(enter)
 
 # bash voice commands specifically for use at work
+# this exports the AWS keys to access the trisect data
 export trisect dvc:
     "trisect_dvc"
+    key(enter)
+
+zerotier join opal:
+    "join_zerotier_opal"
+    key(enter)
+
+zerotier join desktop:
+    "join_zerotier_desktop"
     key(enter)
 
 # TODO: this should use a capture to also support other virtual environments,
