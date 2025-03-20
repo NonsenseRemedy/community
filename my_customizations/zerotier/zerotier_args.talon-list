@@ -1,0 +1,21 @@
+list: user.zerotier_args
+-
+
+help: -h
+version: -v
+json: -j
+
+# skipping path, port, token as they all require arguments
+
+info: info
+list peers: listpeers
+peers: peers
+list networks: listnetworks
+dump: dump
+list moons: listmoons
+
+# the following commands all require network ids
+# disabling for now, since I have more specific versions in work_bash.talon
+# join: join
+# leave: leave
+# also skipping: set, get, orbit, deorbit
