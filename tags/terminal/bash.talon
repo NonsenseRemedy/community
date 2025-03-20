@@ -32,6 +32,7 @@ dir last:
 # LEL Added 6 March 2025, trying to make git add patch less annoying
 yes: "y\n"
 no: "n\n"
+split: "s\n"
 
 list: "ls\n"
 list all: "ls -a\n"
