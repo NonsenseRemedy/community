@@ -59,6 +59,7 @@ ross: ROS
 ross bag: rosbag
 ross core: roscore
 ROS message: rosmsg
+ROS run: rosrun
 ROS time: rostime
 ross topic: rostopic
 rviz
