@@ -140,7 +140,7 @@ settings():
 # Enabling this tag disables other pop to click actions in command mode, including pop to click
 # tag(): user.pop_twice_to_repeat
 
-# Uncomment the below to enable support for saying numbers without a prefix.
+# Uncomment the below to enable support saying numbers without a prefix.
 # By default you need to say "numb one" to write "1". If you uncomment this,
 # you can say "one" to write "1".
 # tag(): user.unprefixed_numbers
@@ -150,3 +150,4 @@ settings():
 # tag(): user.experimental_window_layout
 tag(): user.cursorless_use_community_snippets
 tag(): user.i3wm
+tag(): user.gamepad
