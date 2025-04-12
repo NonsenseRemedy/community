@@ -13,17 +13,30 @@ mod.tag("gamepad", desc="Activate tag to enable gamepad bindings")
 class Actions:
     # DPAD buttons
 
+    # I have not been able to map any keys to these explicitly;
+    # however, there are several keys in the profile editor for the
+    # access controller that show up as these in talon
+    # touchpad->dpad_left
+    # R3->dpad_down
+
     def gamepad_press_dpad_left():
         """Gamepad press button dpad left"""
-        gamepad_mouse_jump("left")
+        # gamepad_mouse_jump("left")
+        # actions.print("gamepad_press_dpad_left")
+        # Use drag rather than click so that the same button can be used for single clicking double clicking and dragging
+        # actions.mouse_click()
+        actions.mouse_drag(0)
 
     def gamepad_release_dpad_left():
         """Gamepad release button dpad left"""
-        actions.skip()
+        # actions.print("gamepad_release_dpad_left")
+        # actions.skip()
+        actions.mouse_release(0)
 
     def gamepad_press_dpad_up():
         """Gamepad press button dpad up"""
-        gamepad_mouse_jump("up")
+        # gamepad_mouse_jump("up")
+        actions.skip()
 
     def gamepad_release_dpad_up():
         """Gamepad release button dpad up"""
@@ -31,7 +44,8 @@ class Actions:
 
     def gamepad_press_dpad_right():
         """Gamepad press button dpad right"""
-        gamepad_mouse_jump("right")
+        # gamepad_mouse_jump("right")
+        actions.skip()
 
     def gamepad_release_dpad_right():
         """Gamepad release button dpad right"""
@@ -39,7 +53,8 @@ class Actions:
 
     def gamepad_press_dpad_down():
         """Gamepad press button dpad down"""
-        gamepad_mouse_jump("down")
+        # gamepad_mouse_jump("down")
+        actions.skip()
 
     def gamepad_release_dpad_down():
         """Gamepad release button dpad down"""
@@ -47,27 +62,36 @@ class Actions:
 
     # Compass / ABXY buttons
 
+    # I was able to map all of these on the access controller
+
     def gamepad_press_west():
         """Gamepad press button west"""
-        actions.mouse_drag(0)
+        # actions.mouse_drag(0)
+        actions.skip()
 
     def gamepad_release_west():
         """Gamepad release button west"""
-        actions.mouse_release(0)
+        # actions.mouse_release(0)
+        actions.skip()
 
     def gamepad_press_north():
         """Gamepad press button north"""
-        actions.mouse_drag(1)
+        # actions.mouse_drag(1)
+        # TODO: a complete implementation of muting focus mate would focus chrome and go to the appropriate tab. I think this is possible with the actions for searching chrome tabs, but this is enough of an improvement for now.
+        actions.key("super-d")
 
     def gamepad_release_north():
         """Gamepad release button north"""
-        actions.mouse_release(1)
+        # actions.mouse_release(1)
+        actions.skip()
 
     def gamepad_press_east():
         """Gamepad press button east"""
-        actions.key("ctrl:down")
-        actions.mouse_click()
-        actions.key("ctrl:up")
+        # actions.key("ctrl:down")
+        # actions.mouse_click()
+        # actions.key("ctrl:up")
+        # TODO: focus zoom and send mute key!
+        actions.key("super-shift-a")
 
     def gamepad_release_east():
         """Gamepad release button east"""
@@ -75,25 +99,34 @@ class Actions:
 
     def gamepad_press_south():
         """Gamepad press button south"""
-        actions.mouse_drag(2)
+        # actions.mouse_drag(2)
+        actions.speech.toggle()
 
     def gamepad_release_south():
         """Gamepad release button south"""
-        actions.mouse_release(2)
+        # actions.mouse_release(2)
+        actions.skip()
 
     # Select / Start buttons
 
     def gamepad_press_select():
         """Gamepad press button select"""
-        actions.skip()
+        # this is also called "option" on the PlayStation controller
+        # actions.skip()
+        # actions.print("gamepad_press_select")
+        actions.mouse_drag(1)
 
     def gamepad_release_select():
         """Gamepad release button select"""
-        actions.skip()
+        # actions.skip()
+        actions.mouse_release(1)
 
     def gamepad_press_start():
         """Gamepad press button start"""
-        actions.speech.toggle()
+        # this is also called "create" on the PlayStation controller
+        # actions.print("gamepad_press_start")
+        # actions.speech.toggle()
+        actions.skip()
 
     def gamepad_release_start():
         """Gamepad release button start"""
@@ -103,7 +136,9 @@ class Actions:
 
     def gamepad_press_left_shoulder():
         """Gamepad press button left shoulder"""
-        actions.user.go_back()
+        # this is labeled L1 in the access controller profile editor
+        # actions.user.go_back()
+        actions.key("pagedown")
 
     def gamepad_release_left_shoulder():
         """Gamepad release button left shoulder"""
@@ -111,7 +146,8 @@ class Actions:
 
     def gamepad_press_right_shoulder():
         """Gamepad press button right shoulder"""
-        actions.user.go_forward()
+        # actions.user.go_forward()
+        actions.key("pageup")
 
     def gamepad_release_right_shoulder():
         """Gamepad release button right shoulder"""
@@ -119,9 +155,13 @@ class Actions:
 
     # Stick buttons
 
+    # I found this too hard to toggle on the access controller
+    # so I'm not using it
+
     def gamepad_press_left_stick():
         """Gamepad press button left thumb stick"""
-        gamepad_scroll_slow_toggle()
+        # gamepad_scroll_slow_toggle()
+        actions.skip()
 
     def gamepad_release_left_stick():
         """Gamepad release button left thumb stick"""
@@ -129,7 +169,8 @@ class Actions:
 
     def gamepad_press_right_stick():
         """Gamepad press button right thumb stick"""
-        gamepad_mouse_move_slow_toggle()
+        # gamepad_mouse_move_slow_toggle()
+        actions.skip()
 
     def gamepad_release_right_stick():
         """Gamepad release button right thumb stick"""
@@ -137,23 +178,31 @@ class Actions:
 
     # Analog triggers
 
+    # TODO: I'm not sure whether the problem is in the access controller or in talon, but I'm only getting binary data here, not an analog value. if it is pressed, it is a 1, and there is no event with a 0 to detect that it has been released.
+
     def gamepad_trigger_left(value: float):
         """Gamepad trigger left movement"""
-        gamepad_scroll(0, value * -1)
+        # gamepad_scroll(0, value * -1)
+        # TODO: this probably won't work because there is not an associated release event
+        # actions.mouse_scroll_down_continuous(10)
+        actions.skip()
 
     def gamepad_trigger_right(value: float):
         """Gamepad trigger right movement"""
-        gamepad_scroll(0, value)
+        # gamepad_scroll(0, value)
+        actions.skip()
 
     # Analog thumb sticks
 
     def gamepad_stick_left(x: float, y: float):
         """Gamepad left stick movement"""
-        gamepad_scroll(x, y)
+        # gamepad_scroll(x, y)
+        actions.print(f"gamepad_stick_left. x = {x}, y = {y}")
 
     def gamepad_stick_right(x: float, y: float):
         """Gamepad right stick movement"""
-        gamepad_mouse_move(x, y)
+        actions.print(f"gamepad_stick_right. x = {x}, y = {y}")
+        # gamepad_mouse_move(x, y)
 
     # Scaffolding actions used by the Talon file
 
