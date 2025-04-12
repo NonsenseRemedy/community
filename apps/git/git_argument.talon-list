@@ -25,9 +25,11 @@ force with lease: --force-with-lease
 global: --global
 global: --global
 hard: --hard
+help: --help
 ignore case: --ignore-case
 include untracked: --include-untracked
 interactive: --interactive
+into name: --into-name
 keep index: --keep-index
 list: --list
 local: --local
