@@ -77,7 +77,10 @@ class Actions:
     def gamepad_press_north():
         """Gamepad press button north"""
         # actions.mouse_drag(1)
-        # TODO: a complete implementation of muting focus mate would focus chrome and go to the appropriate tab. I think this is possible with the actions for searching chrome tabs, but this is enough of an improvement for now.
+        # TODO: a complete implementation of muting focus mate would focus
+        # chrome and go to the appropriate tab. I think this is possible with
+        # the actions for searching chrome tabs, but this is enough of an
+        # improvement for now.
         actions.key("super-d")
 
     def gamepad_release_north():
