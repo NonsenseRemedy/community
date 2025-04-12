@@ -5,6 +5,7 @@ N map: nmap
 under documented: under-documented
 nmap
 admin
+arete
 Cisco
 Citrix
 VPN
@@ -22,37 +23,58 @@ AprilTags
 bagfile
 ballotini
 Bashar si: bashrc
+Candice
 captcha
 catkin
 COLDEX
+coreXY
+CReSIS
 cryosphere
+debounce
+debounced
 dvc
 Focusrite
+gamepad
 gaze OCR: gaze-ocr
 gee lunch: Glunch
 graal
 graals
 grep
 grepping
+GUI
 hackily
+hyenine
 iPython
+Jakuba
+Jamin
 jupyter
+KOPRI
 MacOS
 manip
 marvering
 moile
 murrini
+netCDF
+NSF
+OGIVE
 Pilchuck
+plotly
 Pratt
 punty
 pie plot: pyplot
+punties
 cue ice radar: QIceRadar
 Quantarctica
+are one: R1
+are two: R2
 radargram
 radargrams
 radioglaciology
 Rango
 README
+RC
+Recurser
+Recursers
 remoted
 Rina
 "Rina's"
@@ -65,13 +87,16 @@ ROS message: rosmsg
 ROS run: rosrun
 ROS time: rostime
 ross topic: rostopic
+rqt
 rviz
+Scarlett
+Schack
+scipy
 shortcat
 Shuai
-Scarlett
 Schweiz: "Shuai's"
-Schack
 Shure
+sock: Sauk
 ssh
 supio
 supios
@@ -80,8 +105,11 @@ tmux
 Tobii
 TODO
 UTIG
+you dub: UW
 vert
 "VSCode's"
+YAML
 yawl: "y'all"
+Zenodo
 zerotier
 Zulip
