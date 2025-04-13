@@ -6,7 +6,7 @@ from enum import StrEnum
 from typing import Callable
 
 screen: Screen = ui.main_screen()
-slow_scroll = False
+slow_scroll = True
 slow_mouse_move = False
 
 mod = Module()
@@ -30,6 +30,10 @@ class GamepadButtons(StrEnum):
     # Shoulder buttons
     LEFT_SHOULDER = "left_shoulder"
     RIGHT_SHOULDER = "right_shoulder"
+    # Triggers, treated as binary buttons
+    # This is weird because they won't have matching press and release events.
+    LEFT_TRIGGER = "left_trigger"
+    RIGHT_TRIGGER = "right_trigger"
     # Stick buttons
     LEFT_STICK = "left_stick"
     RIGHT_STICK = "right_stick"
@@ -128,6 +132,18 @@ class GamepadHelpers:
 
     control_click_action = ButtonActions(control_click, None, actions.skip)
 
+    scroll_up = ButtonActions(
+        lambda: actions.user.mouse_scroll_up_continuous(10),
+        actions.skip,
+        actions.user.mouse_scroll_stop,
+    )
+
+    scroll_down = ButtonActions(
+        lambda: actions.user.mouse_scroll_down_continuous(10),
+        actions.skip,
+        actions.user.mouse_scroll_stop,
+    )
+
     toggle_talon_speech = ButtonActions(
         actions.speech.toggle,
         actions.skip,
@@ -192,6 +208,8 @@ class GamepadHelpers:
         # GamepadButtons.RIGHT_SHOULDER: go_forward,
         GamepadButtons.LEFT_SHOULDER: page_down,
         GamepadButtons.RIGHT_SHOULDER: page_up,
+        GamepadButtons.LEFT_TRIGGER: scroll_down,
+        GamepadButtons.RIGHT_TRIGGER: scroll_up,
         # Stick buttons
         # GamepadButtons.LEFT_STICK: gamepad_scroll_slow_toggle,
         # GamepadButtons.RIGHT_STICK: gamepad_mouse_move_slow_toggle,
@@ -221,33 +239,37 @@ class Actions:
 
     # Analog triggers
 
-    # TODO: I'm not sure whether the problem is in the access controller or in talon, but I'm only getting binary data here, not an analog value. if it is pressed, it is a 1, and there is no event with a 0 to detect that it has been released.
+    # TODO: I'm not sure whether the problem is in the access controller or
+    # in talon, but I'm only getting binary data here, not an analog value.
+    # if it is pressed, it is a 1, and there is no event with a 0 to detect
+    # # that it has been released.
 
     def gamepad_trigger_left(value: float):
         """Gamepad trigger left movement"""
         # gamepad_scroll(0, value * -1)
         # TODO: this probably won't work because there is not an associated release event
-        # actions.mouse_scroll_down_continuous(10)
-        actions.print(f"gamepad_trigger_left: {value}")
+        # actions.print(f"gamepad_trigger_left: {value}")
+        # actions.user.mouse_scroll_down_continuous(10)
         actions.skip()
 
     def gamepad_trigger_right(value: float):
         """Gamepad trigger right movement"""
         # gamepad_scroll(0, value)
-        actions.print(f"gamepad_trigger_right: {value}")
+        # actions.print(f"gamepad_trigger_right: {value}")
         actions.skip()
 
     # Analog thumb sticks
 
     def gamepad_stick_left(x: float, y: float):
         """Gamepad left stick movement"""
-        # gamepad_scroll(x, y)
-        actions.print(f"gamepad_stick_left. x = {x}, y = {y}")
+        gamepad_scroll(x, y)
+        # actions.print(f"gamepad_stick_left. x = {x}, y = {y}")
 
     def gamepad_stick_right(x: float, y: float):
         """Gamepad right stick movement"""
-        actions.print(f"gamepad_stick_right. x = {x}, y = {y}")
+        # actions.print(f"gamepad_stick_right. x = {x}, y = {y}")
         # gamepad_mouse_move(x, y)
+        actions.skip()
 
     # Scaffolding actions used by the Talon file
 
@@ -258,6 +280,9 @@ class Actions:
 
         if button not in GamepadButtons:
             raise ValueError(f"Unknown button: {button}")
+
+        if button not in GamepadHelpers.gamepad_button_map:
+            raise ValueError(f"Unmapped button: {button}")
 
         button_press_count[button] += 1
         dt = time.time() - last_press_time[button]
@@ -311,16 +336,15 @@ def gamepad_scroll(x: float, y: float):
     actions.print(f"gamepad_scroll. x = {x}, y = {y}")
 
     # this requires the mouse to be over the window.
-    # TODO: figure out this scaling so I can make it slower.
-    multiplier = 1.5 if slow_scroll else 3
-    multiplier = 0.5
-    # x = x**3 * multiplier
-    x = x * multiplier
-    # y = y**3 * multiplier
-    y = y * multiplier
+    # it appears that the mouse scroll action takes integers,
+    # so we need to make sure the input is greater than one for it to move
+    # (a multiplier of 1 is insufficient)
+    # Unfortunately, even this is too fast if done by lines.
+    yy = y * 25
+    xx = x * 10
 
-    if x != 0 or y != 0:
-        actions.mouse_scroll(x=x, y=y, by_lines=True)
+    if xx != 0 or yy != 0:
+        actions.mouse_scroll(x=xx, y=yy, by_lines=False)
 
 
 def gamepad_mouse_move(dx: float, dy: float):
