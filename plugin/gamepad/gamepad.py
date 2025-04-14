@@ -59,19 +59,17 @@ button_press_count = {button: 0 for button in GamepadButtons}
 
 @dataclass
 class ButtonActions:
-    # TODO: test whether the general buttons actually support repeat
-    # the default talon file doesn't seem to use it, but I can imagine wanting
-    # it for a binary scroll
-    # TODO: get rid of none and use actions.skip instead?
     on_press: Callable = actions.skip
-    on_repeat: Callable = actions.skip
     on_release: Callable = actions.skip
 
 
 class GamepadHelpers:
-    """grouping the variables and functions together that will be used to implement gamepad functionality. These are a separate class from the actions class, since they should not be called directly from a talon file"""
+    """
+    grouping the variables and functions together that will be used to implement gamepad
+    functionality. These are a separate class from the actions class, since they should
+    not be called directly from a talon file
+    """
 
-    # TODO: this is getting ugly thanks to the global nature of my map. I really want to move this into a class. It needs to be a separate class from the actions that are allowed to be mapped from a talon file.
     def gamepad_scroll_slow_toggle():
         """Toggle gamepad slow scroll mode"""
         global slow_scroll
@@ -89,93 +87,97 @@ class GamepadHelpers:
 
     no_action = ButtonActions()
 
-    # TODO: is a lambda really the best way to do this? I think making button actions a proper class might be the right option.
+    # TODO: is a lambda really the best way to do this? I think making button actions a proper
+    # class might be the right option.
     left_mouse_drag = ButtonActions(
         lambda: actions.mouse_drag(0),
-        actions.skip,
         lambda: actions.mouse_release(0),
     )
     right_mouse_drag = ButtonActions(
         lambda: actions.mouse_drag(1),
-        actions.skip,
         lambda: actions.mouse_release(1),
     )
     center_mouse_drag = ButtonActions(
         lambda: actions.mouse_drag(2),
-        actions.skip,
         lambda: actions.mouse_release(2),
     )
 
     mouse_jump_left_action = ButtonActions(
-        lambda: gamepad_mouse_jump("left"), None, actions.skip
+        lambda: gamepad_mouse_jump("left"), actions.skip
     )
 
     mouse_jump_right_action = ButtonActions(
-        lambda: gamepad_mouse_jump("right"), None, actions.skip
+        lambda: gamepad_mouse_jump("right"), actions.skip
     )
 
-    mouse_jump_up_action = ButtonActions(
-        lambda: gamepad_mouse_jump("up"), None, actions.skip
-    )
+    mouse_jump_up_action = ButtonActions(lambda: gamepad_mouse_jump("up"), actions.skip)
 
     mouse_jump_down_action = ButtonActions(
-        lambda: gamepad_mouse_jump("down"), None, actions.skip
+        lambda: gamepad_mouse_jump("down"), actions.skip
     )
 
-    toggle_mouse_move_slow = ButtonActions(
-        gamepad_mouse_move_slow_toggle, None, actions.skip
-    )
+    toggle_mouse_move_slow = ButtonActions(gamepad_mouse_move_slow_toggle, actions.skip)
 
-    toggle_mouse_move_slow = ButtonActions(
-        gamepad_mouse_move_slow_toggle, None, actions.skip
-    )
+    toggle_mouse_move_slow = ButtonActions(gamepad_mouse_move_slow_toggle, actions.skip)
 
-    control_click_action = ButtonActions(control_click, None, actions.skip)
+    control_click_action = ButtonActions(control_click, actions.skip)
 
     scroll_up = ButtonActions(
         lambda: actions.user.mouse_scroll_up_continuous(10),
-        actions.skip,
         actions.user.mouse_scroll_stop,
     )
 
     scroll_down = ButtonActions(
         lambda: actions.user.mouse_scroll_down_continuous(10),
-        actions.skip,
         actions.user.mouse_scroll_stop,
     )
 
     toggle_talon_speech = ButtonActions(
         actions.speech.toggle,
         actions.skip,
-        actions.skip,
     )
+
+    talon_push_to_talk = ButtonActions(actions.speech.enable, actions.speech.disable)
 
     toggle_mute_focusmate = ButtonActions(
         # TODO: a complete implementation of muting focus mate would focus
         # chrome and go to the appropriate tab. I think this is possible with
         # the actions for searching chrome tabs, but this is enough of an
         # improvement for now.
-        # TODO: sometimes this toggles chrome to bookmark the page, and I'm not sure what controls where the signal is sent
-        # It seems to be an issue the first time I press the key after starting a new focus mate session.
+        # TODO: sometimes this toggles chrome to bookmark the page, and I'm not
+        # sure what controls where the signal is sent
+        # It seems to be an issue the first time I press the key after starting
+        # a new focus mate session.
         lambda: actions.key("super-d"),
         actions.skip,
-        actions.skip,
+    )
+
+    def focus_zoom_and_toggle_mute():
+        app = actions.user.get_running_app("zoom.us")
+        actions.user.switcher_focus_app(app)
+        actions.key("super-shift-a")
+
+    def focus_zoom_and_push_to_talk():
+        app = actions.user.get_running_app("zoom.us")
+        actions.user.switcher_focus_app(app)
+        actions.key("space:down")
+
+    zoom_push_to_talk = ButtonActions(
+        focus_zoom_and_push_to_talk, lambda: actions.key("space:up")
     )
 
     toggle_mute_zoom = ButtonActions(
         # TODO: focus zoom before sending mute key!
-        lambda: actions.key("super-shift-a"),
-        actions.skip,
+        # lambda: actions.key("super-shift-a"),
+        focus_zoom_and_toggle_mute,
         actions.skip,
     )
 
-    go_back = ButtonActions(actions.user.go_back, actions.skip, actions.skip)
+    go_back = ButtonActions(actions.user.go_back, actions.skip)
 
-    go_forward = ButtonActions(actions.user.go_forward, actions.skip, actions.skip)
-    page_up = ButtonActions(lambda: actions.key("pageup"), actions.skip, actions.skip)
-    page_down = ButtonActions(
-        lambda: actions.key("pagedown"), actions.skip, actions.skip
-    )
+    go_forward = ButtonActions(actions.user.go_forward, actions.skip)
+    page_up = ButtonActions(lambda: actions.key("pageup"), actions.skip)
+    page_down = ButtonActions(lambda: actions.key("pagedown"), actions.skip)
 
     # TODO: the goal is to get rid of functions named based on the buttons,
     # and replace them with functions named based on what they do
@@ -194,15 +196,15 @@ class GamepadHelpers:
         # GamepadButtons.NORTH: right_mouse_drag,
         # GamepadButtons.EAST: control_click_action,
         # GamepadButtons.SOUTH: center_mouse_drag,
-        GamepadButtons.WEST: no_action,
+        GamepadButtons.WEST: toggle_mute_zoom,
         GamepadButtons.NORTH: toggle_mute_focusmate,
-        GamepadButtons.EAST: toggle_mute_zoom,
+        GamepadButtons.EAST: talon_push_to_talk,
         GamepadButtons.SOUTH: toggle_talon_speech,
         # Select / Start buttons
         # GamepadButtons.SELECT: no_action,
         # GamepadButtons.START: toggle_talon_speech,
         GamepadButtons.SELECT: right_mouse_drag,
-        GamepadButtons.START: no_action,
+        GamepadButtons.START: zoom_push_to_talk,
         # Shoulder buttons
         # GamepadButtons.LEFT_SHOULDER: go_back,
         # GamepadButtons.RIGHT_SHOULDER: go_forward,

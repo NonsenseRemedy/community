@@ -41,9 +41,16 @@ gamepad(r3:down): user.gamepad_button_down("right_stick")
 gamepad(r3:up): user.gamepad_button_up("right_stick")
 
 # Analog triggers
+# I'm using these as binary buttons since the analog values aren't getting passed along correctly
+gamepad(l2:down): user.gamepad_button_down("left_trigger")
+gamepad(l2:up): user.gamepad_button_up("left_trigger")
+gamepad(r2:down): user.gamepad_button_down("right_trigger")
+gamepad(r2:up): user.gamepad_button_up("right_trigger")
 gamepad(l2:repeat): user.gamepad_trigger_left(value)
 gamepad(r2:repeat): user.gamepad_trigger_right(value)
 
 # Analog thumb sticks
 gamepad(left_xy:repeat): user.gamepad_stick_left(x, y*-1)
-gamepad(right_xy:repeat): user.gamepad_stick_right(x, y*-1)
+# This seems to be accidentally triggered by the access triggers.
+# disabling for now, and hoping for a response from the author of the profile editor.
+# gamepad(right_xy:repeat):   user.gamepad_stick_right(x, y*-1)
