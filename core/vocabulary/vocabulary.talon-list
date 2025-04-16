@@ -30,9 +30,12 @@ COLDEX
 coreXY
 CReSIS
 cryosphere
+CUI
 debounce
 debounced
+dpad
 dvc
+enum
 Focusrite
 gamepad
 gaze OCR: gaze-ocr
@@ -44,6 +47,7 @@ grepping
 GUI
 hackily
 hyenine
+ID
 iPython
 Jakuba
 Jamin
@@ -104,6 +108,7 @@ te ja: T.J.
 tmux
 Tobii
 TODO
+unmute
 UTIG
 you dub: UW
 vert
