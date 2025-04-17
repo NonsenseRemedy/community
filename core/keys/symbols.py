@@ -21,7 +21,7 @@ symbols_for_create_spoken_forms = {
     "and": "&",
     # for emails
     "at": "@",
-    "dot": ".",
+    "stop": ".",
     # for application names like "notepad++"
     "plus": "+",
 }
@@ -59,8 +59,8 @@ currency_symbols = [
 old_symbols = [
     Symbol("`", ["back tick"], ["grave"]),
     Symbol(",", ["comma", "coma"]),
-    Symbol(".", ["period", "full stop"], ["dot", "point"]),
-    Symbol(";", ["semicolon"], ["semi"]),
+    Symbol(".", ["period", "full stop"], ["stop", "point"]),
+    Symbol(";", ["semicolon"]),
     Symbol(":", ["colon"]),
     Symbol("?", ["question mark"], ["question"]),
     Symbol("!", ["exclamation mark", "exclamation point"], ["bang"]),
