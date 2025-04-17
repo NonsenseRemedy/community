@@ -158,18 +158,23 @@ class GamepadHelpers:
         actions.key("super-shift-a")
 
     def focus_zoom_and_push_to_talk():
+        """I think I prefer the option that does not focus zoom"""
         app = actions.user.get_running_app("zoom.us")
         actions.user.switcher_focus_app(app)
         actions.key("space:down")
 
+    # This action feels slow, but that is thanks to zoom not talon
     zoom_push_to_talk = ButtonActions(
-        focus_zoom_and_push_to_talk, lambda: actions.key("space:up")
+        lambda: ctrl.key_press(
+            "space", down=True, app=ui.apps(bundle="us.zoom.xos")[0]
+        ),
+        lambda: ctrl.key_press("space", up=True, app=ui.apps(bundle="us.zoom.xos")[0]),
     )
 
     toggle_mute_zoom = ButtonActions(
-        # TODO: focus zoom before sending mute key!
-        # lambda: actions.key("super-shift-a"),
-        focus_zoom_and_toggle_mute,
+        lambda: ctrl.key_press(
+            "a", app=ui.apps(bundle="us.zoom.xos")[0], super=True, shift=True
+        ),
         actions.skip,
     )
 
@@ -196,8 +201,8 @@ class GamepadHelpers:
         # GamepadButtons.NORTH: right_mouse_drag,
         # GamepadButtons.EAST: control_click_action,
         # GamepadButtons.SOUTH: center_mouse_drag,
-        GamepadButtons.WEST: toggle_mute_zoom,
-        GamepadButtons.NORTH: toggle_mute_focusmate,
+        GamepadButtons.WEST: toggle_mute_focusmate,
+        GamepadButtons.NORTH: toggle_mute_zoom,
         GamepadButtons.EAST: talon_push_to_talk,
         GamepadButtons.SOUTH: toggle_talon_speech,
         # Select / Start buttons
