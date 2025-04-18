@@ -34,6 +34,9 @@ yes: "y\n"
 no: "n\n"
 split: "s\n"
 
+# LEL Added 17 April 2025
+ping <user.prose>$: "ping {prose}"
+
 list: "ls\n"
 list all: "ls -a\n"
 list long: "ls -lah\n"
@@ -50,8 +53,8 @@ run history <number>: "!{number}\n"
 run last: "!!\n"
 run last <number>: "!-{number}\n"
 
-head <number_small>: "head -{number_small}"
-tail <number_small>: "tail -{number_small}"
+head <number_small>: "head -{number_small} "
+tail <number_small>: "tail -{number_small} "
 
 print dir: "pwd\n"
 copy dir: "pwd | clipboard\n"
