@@ -112,7 +112,9 @@ ssh: "ssh "
 # fc last command in editor.
 
 talon user update:
+    # trying to avoid bringing in the rust experiments branch
     "find {path.talon_user()} -type d -name .git -print -execdir git pull --ff-only \\;\n"
+    "find {path.talon_user()} -type d -name .git -print -execdir git branch --remote --delete origin/knausj-personal-experiments_rust \\;\n"
     "find {path.talon_user()} -type d -name .git -print -execdir git fetch origin main \\;\n"
     # this is a brute force way to deal with talon-filetree-commands, which uses master and not main
     "find {path.talon_user()} -type d -name .git -print -execdir git fetch origin master \\;\n"
