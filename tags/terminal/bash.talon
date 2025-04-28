@@ -96,7 +96,10 @@ op or: " || "
 terminate: key(ctrl-c)
 clear: key(ctrl-l)
 revert: key(alt-r)
-ssh: "ssh "
+
+ssh <user.prose>$: "ssh {prose}"
+scp: "scp "
+exit: "exit "
 
 # head:                          "head "
 # tail:                          "tail "
