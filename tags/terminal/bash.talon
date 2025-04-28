@@ -33,6 +33,7 @@ dir last:
 yes: "y\n"
 no: "n\n"
 split: "s\n"
+quit: "q\n"
 
 # LEL Added 17 April 2025
 ping <user.prose>$: "ping {prose}"
