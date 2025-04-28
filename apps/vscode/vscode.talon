@@ -72,8 +72,8 @@ snip (last | previous): user.vscode("jumpToPrevSnippetPlaceholder")
 centered switch: user.vscode("workbench.action.toggleCenteredLayout")
 fullscreen switch: user.vscode("workbench.action.toggleFullScreen")
 theme switch: user.vscode("workbench.action.selectTheme")
-wrap switch: user.vscode("editor.action.toggleWordWrap")
-zen switch: user.vscode("workbench.action.toggleZenMode")
+wrap (switch | dog): user.vscode("editor.action.toggleWordWrap")
+zen (switch | dog): user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
 file hunt [<user.text>]:
