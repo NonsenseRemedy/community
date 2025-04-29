@@ -1,5 +1,6 @@
-tag: user.gamepad
-and not tag: user.gamepad_tester
+# tag: user.gamepad
+# and not tag: user.gamepad_tester
+not tag: user.gamepad_tester
 -
 
 # DPAD buttons
