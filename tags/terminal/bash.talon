@@ -39,7 +39,9 @@ quit: "q\n"
 ping <user.prose>$: "ping {prose}"
 
 list: "ls\n"
-list all: "ls -a\n"
+list all:
+    "ls -la"
+    key(enter)
 list long: "ls -lah\n"
 list long pipe: "ls -lah | "
 
