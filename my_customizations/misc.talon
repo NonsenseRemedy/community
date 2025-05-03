@@ -19,7 +19,6 @@ face(jaw_right): print("jaw_right")
 face(scrunch_nose): print("scrunch_nose")
 
 face(mouth_pucker): print("mouth_pucker")
-face(jaw_open): print("jaw_open")
 
 # this one triggers a lot
 face(smile): print("smile")
