@@ -15,6 +15,7 @@ Minecraft
 # my additions
 administrivia
 AGAP
+AGASEA
 Anki
 ah vee: AWI
 APL
@@ -26,6 +27,7 @@ Bashar si: bashrc
 Candice
 captcha
 catkin
+sea make: cmake
 COLDEX
 coreXY
 CReSIS
@@ -33,10 +35,12 @@ cryosphere
 CUI
 debounce
 debounced
+DOI
 dpad
 dvc
 enum
 Focusrite
+Gamburtsev
 gamepad
 gaze OCR: gaze-ocr
 gee lunch: Glunch
@@ -46,6 +50,7 @@ grep
 grepping
 GUI
 hackily
+holonomic
 hyenine
 ID
 iPython
@@ -53,14 +58,19 @@ Jakuba
 Jamin
 jupyter
 KOPRI
+Kugler
 la tech: latex
+LDEO
 MacOS
 manip
 marvering
+marvered
 moile
+moveit
 murrini
 netCDF
 NSF
+envy blocks: nvblox
 OGIVE
 Pilchuck
 plotly
@@ -80,7 +90,9 @@ README
 RC
 Recurser
 Recursers
+Reichenbach
 remoted
+repos
 Rina
 "Rina's"
 rondel
@@ -88,7 +100,8 @@ rondels
 ross: ROS
 ross bag: rosbag
 ross core: roscore
-ROS message: rosmsg
+ross dep: rosdep
+ross message: rosmsg
 ROS run: rosrun
 ROS time: rostime
 ross topic: rostopic
@@ -107,10 +120,12 @@ supio
 supios
 te ja: T.J.
 tech
+teleop
 tmux
 Tobii
 TODO
 unmute
+USB
 UTIG
 uv
 vespine

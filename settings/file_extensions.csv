@@ -55,6 +55,8 @@ File extension,Name
 .bashrc,dot bashrc
 .gov,dot guv
 .ipynb,dot eye pie notebook
+.launch,dot launch
 .msg,dot message
 .pkl,dot pickle
+.repos,dot repos
 .tex,dot tech
