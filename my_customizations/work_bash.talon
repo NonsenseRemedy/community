@@ -10,6 +10,10 @@ catkin build:
     "catkin build"
     key(enter)
 
+catkin clean:
+    "catkin clean"
+    key(enter)
+
 view frames:
     "rosrun tf2_tools view_frames.py"
     key(enter)

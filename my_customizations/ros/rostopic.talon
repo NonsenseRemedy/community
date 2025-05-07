@@ -27,7 +27,6 @@ rostopic bandwidth [window <number_small>] (this | that):
 
 rostopic bandwidth [window <number_small>] paste:
     window = ""
-    text = edit.selected_text()
     "rostopic bw{window} {clip.text()}"
     key(enter)
 
