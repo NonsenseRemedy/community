@@ -124,6 +124,7 @@ teleop
 tmux
 Tobii
 TODO
+trisect
 unmute
 USB
 UTIG
@@ -137,3 +138,8 @@ yawl: "y'all"
 Zenodo
 zerotier
 Zulip
+
+# repository names I keep having to spell out
+raven manip software: raven_manip_sw
+testbed hardware: testbed_hw
+testbed software: testbed_sw
