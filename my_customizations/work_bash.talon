@@ -38,6 +38,9 @@ mux list sessions:
     "tmux list-sessions"
     key(enter)
 
+mux attach session:
+    "tmux attach-session -t "
+
 mux kill session:
     key(ctrl-b)
     key(:)
