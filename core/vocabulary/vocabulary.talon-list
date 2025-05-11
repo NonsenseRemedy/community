@@ -99,9 +99,11 @@ rondel
 rondels
 ross: ROS
 ross bag: rosbag
+ross cd: roscd
 ross core: roscore
 ross dep: rosdep
 ross message: rosmsg
+ross node: rosnode
 ROS run: rosrun
 ROS time: rostime
 ross topic: rostopic
