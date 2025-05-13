@@ -312,6 +312,7 @@ py,python
 qc,quebec
 qs,query string
 rad,radian
+rads,radians
 rand,random
 rwx,read right ex
 rcpt,receipt
@@ -446,4 +447,6 @@ wip,work in progress
 
 cov,covariance
 Dr.,doctor
+sec,second
+secs,seconds
 sw,software
