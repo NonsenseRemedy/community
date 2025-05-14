@@ -23,25 +23,25 @@ mux detach:
     key(d)
 
 
-mux win <number_small>:
+mux (win | window) <number_small>:
     key(ctrl-b)
     key('{number_small}')
 
-mux win close:
+mux (win | window) close:
     key(ctrl-b)
     key(&)
 
-mux win new:
+mux (win | window) new:
     key(ctrl-b)
     key(c)
 
-mux win last:
+mux (win | window) last:
     key(ctrl-b)
     key(p)
-mux win next:
+mux (win | window) next:
     key(ctrl-b)
     key(n)
-mux win rename:
+mux (win | window) rename:
     key(ctrl-b)
     key(,)
 

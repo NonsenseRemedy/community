@@ -13,16 +13,16 @@ move (win | window) right: user.i3wm_move("right")
 move (win | window) up: user.i3wm_move("up")
 move (win | window) down: user.i3wm_move("down")
 
-# NB: You can only move to a port that already has an associated window;
-# so it is necessary to first move a window and then switch to the port
-port <number_small>: user.i3wm_switch_to_workspace(number_small)
+# NB: You can only move to a desk that already has an associated window;
+# so it is necessary to first move a window and then switch to the desk
+desk <number_small>: user.i3wm_switch_to_workspace(number_small)
 
-port next: user.i3wm_switch_to_workspace("next")
-port last: user.i3wm_switch_to_workspace("prev")
+desk next: user.i3wm_switch_to_workspace("next")
+desk last: user.i3wm_switch_to_workspace("prev")
 
-move (win | window) [to] port <number_small>:
+move (win | window) [to] desk <number_small>:
     user.i3wm_move_to_workspace(number_small)
-move (win | window) [to] last port:
+move (win | window) [to] last desk:
     user.i3wm_move_to_workspace("back_and_forth")
 
 
@@ -74,7 +74,7 @@ lock screen: user.i3wm_lock()
 ##### Commands below this line are ones I'm not sure about / inherited from community
 
 # this got confused with "slapper"
-# (port flip | flipper): user.i3wm_switch_to_workspace("back_and_forth")
+# (desk flip | flipper): user.i3wm_switch_to_workspace("back_and_forth")
 
 # LEL 2025-05-14: this seems broken
 # (shuffle | move) flipper: user.i3wm_move_to_workspace("back_and_forth")
