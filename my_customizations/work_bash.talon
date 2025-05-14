@@ -9,6 +9,12 @@ start testbed manip:
     "cd ~/manip_ws/src/raven_manip_sw/launch/launch_scripts \n"
     "./start_testbed_manip.sh"
 
+enable testbed:
+    "rosservice call /testbed/enable_all 'enable: true'"
+
+disable testbed:
+    "rosservice call /testbed/enable_all 'enable: false'"
+
 
 
 
