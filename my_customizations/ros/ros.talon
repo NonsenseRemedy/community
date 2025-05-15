@@ -12,3 +12,6 @@ rosdep install:
 
 vcs import:
     "vcs import --recursive --input "
+
+vcs pull:
+    "vcs pull "
