@@ -39,6 +39,7 @@ DOI
 dpad
 dvc
 enum
+ea stop: E-stop
 Focusrite
 Gamburtsev
 gamepad
@@ -69,6 +70,7 @@ moile
 moveit
 murrini
 netCDF
+NOAA
 NSF
 envy blocks: nvblox
 OGIVE
@@ -130,6 +132,7 @@ trisect
 unmute
 USB
 UTIG
+URDF
 uv
 vespine
 you dub: UW

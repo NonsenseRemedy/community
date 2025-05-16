@@ -42,10 +42,17 @@ git log long$:
     key(enter)
 
 # Convenience
-git clone clipboard:
+git clone (this | that):
     insert("git clone ")
     edit.paste()
     key(enter)
+
+git clone paste:
+    edit.copy()
+    insert("git clone ")
+    edit.paste()
+    key(enter)
+
 git diff highlighted:
     edit.copy()
     insert("git diff ")

@@ -27,7 +27,8 @@ bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
 # from Pokey Rule
-side dog: user.vscode("workbench.action.toggleSidebarVisibility")
+side dog | left dog | bar dog:
+    user.vscode("workbench.action.toggleSidebarVisibility")
 search next: user.vscode("search.action.focusNextSearchResult")
 search last: user.vscode("search.action.focusPreviousSearchResult")
 

@@ -15,3 +15,7 @@ vcs import:
 
 vcs pull:
     "vcs pull "
+
+vcs status:
+    "vcs status \n"
+
