@@ -1,7 +1,6 @@
 tag: terminal
 -
 
-# NYI rostopic commands: pub
 
 # The next time I do this,  I think I will follow the example in git.talon better and do one omnibus file of options across all related tools,  rather than trying to make sure that they only  produced valid commands.  I also think I should have produced a separate list of  rostopic sub commands and parametrized the rules that way as well.
 
@@ -190,6 +189,10 @@ rostopic list [<user.rostopic_list_args>] grep <user.text>:
 #
 # Given how much editing has to happen to fill out the fields in a message,  I'm wondering whether this would be better to do an an ipython notebook,  so I could use cursorless to edit it.
 
+rostopic pub notes:
+    insert('rostopic pub --once /notes apl_msgs/StringStamped "{{header: auto, data: \'\'}}"')
+    key(left:3)
+
 rostopic pub [<user.rostopic_pub_args>]:
     args = rostopic_pub_args or ""
     "rostopic pub {args}"
@@ -202,7 +205,6 @@ rostopic pub [<user.rostopic_pub_args>] (this | that):
 rostopic pub [<user.rostopic_pub_args>] paste:
     args = rostopic_pub_args or ""
     "rostopic pub{args} {clip.text()} "
-
 
 
 #############################################
