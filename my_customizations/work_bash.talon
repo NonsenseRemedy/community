@@ -16,7 +16,11 @@ disable testbed:
     "rosservice call /testbed/enable_all 'enable: false'"
 
 redirect:
-    " 2>&1 | tee -a ~/output.txt && echo `history 1` >> ~/output.txt"
+    " 2>&1 | tee -a ~/output.txt && echo `history 1` | cut -d' ' -f2- >> ~/output.txt"
+
+redirect that:
+    "!! 2>&1 | tee -a ~/output.txt && echo `history 1` | cut -d' ' -f2- >> ~/output.txt"
+    key(enter)
 
 source bashrc:
     "source ~/.bashrc"
