@@ -18,8 +18,9 @@ disable testbed:
 redirect:
     " 2>&1 | tee -a ~/output.txt && echo `history 1` >> ~/output.txt"
 
-
-
+source bashrc:
+    "source ~/.bashrc"
+    key(enter)
 
 # bash voice commands specifically for use at work that rely on
 # bashrc aliases

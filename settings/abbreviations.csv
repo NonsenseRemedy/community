@@ -250,6 +250,7 @@ mnt,mount
 multi,multiple
 musl,muscle
 mut,mutate
+nav,navigation
 ns,nano second
 nvim,neo vim
 nb,new brunswick
@@ -309,6 +310,7 @@ proto,protocol
 protobuf,protocol buffers
 pub,public
 py,python
+quat,quaternion
 qc,quebec
 qs,query string
 rad,radian
