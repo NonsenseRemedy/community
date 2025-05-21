@@ -18,28 +18,6 @@ disable testbed:
 
 
 
-##########
-# probably-temporary until I do a more thorough catkin command set
-catkin build:
-    "catkin build "
-
-catkin build all:
-    "catkin build"
-    key(enter)
-
-catkin clean:
-    "catkin clean"
-    key(enter)
-
-view frames:
-    "rosrun tf2_tools view_frames.py"
-    key(enter)
-
-# TODO: this should move into a proper ROS tool with support for flags
-# (tea | tee) eff echo:
-transform echo:
-    "rosrun tf2_tools echo.py "
-
 # bash voice commands specifically for use at work that rely on
 # bashrc aliases
 # Export the AWS keys to access the trisect data
