@@ -15,6 +15,9 @@ enable testbed:
 disable testbed:
     "rosservice call /testbed/enable_all 'enable: false'"
 
+redirect:
+    " 2>&1 | tee -a ~/output.txt && echo `history 1` >> ~/output.txt"
+
 
 
 
