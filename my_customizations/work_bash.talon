@@ -5,6 +5,14 @@ manip:
     "manip"
     key(enter)
 
+dir manip source:
+    "cd ~/manip_ws/src"
+    key(enter)
+
+dir talon community:
+    "cd ~/talon/user/community"
+    key(enter)
+
 start testbed manip:
     "cd ~/manip_ws/src/raven_manip_sw/launch/launch_scripts \n"
     "./start_testbed_manip.sh"
