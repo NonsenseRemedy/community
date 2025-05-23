@@ -42,6 +42,8 @@ vcs import:
 vcs pull:
     "vcs pull "
 
+vcs fetch:
+    "vcs custom --git --args fetch \n"
+
 vcs status:
     "vcs status \n"
-
