@@ -32,6 +32,13 @@ side dog | left dog | bar dog:
 search next: user.vscode("search.action.focusNextSearchResult")
 search last: user.vscode("search.action.focusPreviousSearchResult")
 
+# trying to work Andreas's tab view
+# bar tabs: user.vscode("tabs.focus")
+# bar tabs: user.vscode("workbench.view.extension.tabs")
+# bar tabs: user.vscode("workbench.view.tabs")
+
+go tab {user.letter} [{user.letter}]:
+    user.run_rpc_command("andreas.focusTab", "{letter_1}{letter_2 or ''}")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -53,7 +60,6 @@ panel terminal: user.vscode("workbench.action.terminal.focus")
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
 # from Pokey Rule
 low dog: user.vscode("workbench.action.togglePanel")
-
 
 # Settings
 show settings: user.vscode("workbench.action.openGlobalSettings")
