@@ -25,7 +25,6 @@ move (win | window) [to] desk <number_small>:
 move (win | window) [to] last desk:
     user.i3wm_move_to_workspace("back_and_forth")
 
-
 (win | window) kill: app.window_close()
 
 (win | window) full: user.i3wm_fullscreen()
@@ -68,6 +67,17 @@ launch <user.text>:
     sleep(100ms)
     insert("{text}")
 
+# these are still untested
+i3 reload: user.i3wm_reload()
+i3 restart: user.i3wm_restart()
+i3 logout: user.i3wm_logout()
+# TODO: figure out how to click "yes,exit"
+# try `copy mouse position`
+# then in a talon script: `  mouse_move(123, 456)
+#     sleep(30ms)
+#     mouse_click(0)`
+# ...though I might prefer to do the clicking explicitly when logging out
+
 # this doesn't seem to actually work...
 lock screen: user.i3wm_lock()
 
@@ -82,9 +92,6 @@ lock screen: user.i3wm_lock()
 (win | window) stacking: user.i3wm_layout("stacking")
 (win | window) default: user.i3wm_layout()
 (win | window) tabbed: user.i3wm_layout("tabbed")
-
-reload i three config: user.i3wm_reload()
-restart i three: user.i3wm_restart()
 
 toggle floating: user.i3wm_float()
 focus floating: user.i3wm_focus("mode_toggle")
