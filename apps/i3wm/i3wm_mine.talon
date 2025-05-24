@@ -68,15 +68,12 @@ launch <user.text>:
     insert("{text}")
 
 # these are still untested
-i3 reload: user.i3wm_reload()
-i3 restart: user.i3wm_restart()
-i3 logout: user.i3wm_logout()
-# TODO: figure out how to click "yes,exit"
-# try `copy mouse position`
-# then in a talon script: `  mouse_move(123, 456)
-#     sleep(30ms)
-#     mouse_click(0)`
-# ...though I might prefer to do the clicking explicitly when logging out
+reload eye three: user.i3wm_reload()
+restart eye three: user.i3wm_restart()
+logout eye three: user.i3wm_logout()
+# TODO: these need to be under a tag for hyenine, since they will be computer specific. values are captured via `copy mouse position`
+yes exit: mouse_move(3659, 26)
+cancel exit: mouse_move(3828, 28)
 
 # this doesn't seem to actually work...
 lock screen: user.i3wm_lock()
