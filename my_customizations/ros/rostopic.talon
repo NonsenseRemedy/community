@@ -177,11 +177,15 @@ rostopic info paste:
 rostopic list [<user.rostopic_list_args>]:
     args = rostopic_list_args or ""
     "rostopic list{args}"
-    key(enter)
 
 rostopic list [<user.rostopic_list_args>] grep <user.text>:
     args = rostopic_list_args or ""
     insert('rostopic list{args} | grep -i "{user.text}"')
+
+rostopic list [<user.rostopic_list_args>] grep:
+    args = rostopic_list_args or ""
+    insert('rostopic list{args} | grep -i ""')
+    key(left:1)
 
 #############################################
 #############################################
