@@ -24,6 +24,7 @@ AprilTags
 bagfile
 ballotini
 Bashar si: bashrc
+Bedmap
 Candice
 captcha
 catkin
@@ -60,6 +61,7 @@ iPython
 Jakuba
 Jamin
 jupyter
+jupiter lab: jupyterlab
 KOPRI
 Kugler
 la tech: latex
@@ -138,6 +140,7 @@ USB
 UTIG
 URDF
 uv
+venv
 vespine
 you dub: UW
 vert

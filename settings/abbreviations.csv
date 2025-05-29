@@ -447,8 +447,10 @@ win,window
 ntoskrnl,windows kernel
 wip,work in progress
 
+# my additions
 cov,covariance
 Dr.,doctor
+MHz,megahertz
 sec,second
 secs,seconds
 sw,software

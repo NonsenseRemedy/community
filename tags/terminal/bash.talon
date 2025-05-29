@@ -104,6 +104,8 @@ ssh <user.prose>$: "ssh {prose}"
 scp: "scp "
 exit: "exit "
 
+iPython three: "ipython3"
+
 # head:                          "head "
 # tail:                          "tail "
 # find:                          "find "

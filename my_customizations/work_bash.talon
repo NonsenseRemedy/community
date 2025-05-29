@@ -40,6 +40,9 @@ source bashrc:
 export trisect dvc:
     "trisect_dvc"
     key(enter)
+export manip dvc:
+    "manip_dvc"
+    key(enter)
 
 zerotier join opal:
     "join_zerotier_opal"
@@ -59,3 +62,12 @@ activate dvc:
 trisect data:
     "cd /zvol1/trisect_data"
     key(enter)
+
+Lindzey at nansen:
+    "lindzey@nansen"
+
+Lindzey at hyenine:
+    "lindzey@hyenine"
+
+Lindzey at vespine:
+    "lindzey@vespine"
