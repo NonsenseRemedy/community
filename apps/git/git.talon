@@ -28,6 +28,10 @@ git show head$:
 # LEL: don't press enter automatically so we can specify files as desired
 git diff$:
     "git diff "
+git diff (this | that):
+    text = edit.selected_text()
+    "git diff {text}"
+    key(enter)
 git diff all$:
     "git diff"
     key(enter)
@@ -42,6 +46,9 @@ git log long$:
     key(enter)
 
 # Convenience
+git checkout (this | that):
+    text = edit.selected_text()
+    "git checkout {text}"
 git clone (this | that):
     insert("git clone ")
     edit.paste()
