@@ -86,6 +86,7 @@ plotly
 Pratt
 punty
 pie plot: pyplot
+pointcloud
 punties
 QGIS
 cue ice radar: QIceRadar
@@ -115,7 +116,9 @@ ross core: roscore
 ross dep: rosdep
 ross message: rosmsg
 ross node: rosnode
+ross pie: rospy
 ROS run: rosrun
+ROS service: rosservice
 ROS time: rostime
 ross topic: rostopic
 ROV
