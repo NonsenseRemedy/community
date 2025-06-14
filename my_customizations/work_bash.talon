@@ -71,3 +71,6 @@ Lindzey at hyenine:
 
 Lindzey at vespine:
     "lindzey@vespine"
+
+uv run [jupyterlab | jupyter lab | jupiter lab]:
+    "uv run --with jupyter jupyter lab"
