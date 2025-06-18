@@ -117,6 +117,7 @@ ross core: roscore
 ross dep: rosdep
 ross message: rosmsg
 ross node: rosnode
+ross param: rosparam
 ross pie: rospy
 ROS run: rosrun
 ROS service: rosservice
