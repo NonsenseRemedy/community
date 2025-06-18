@@ -314,7 +314,7 @@ disclose:
     key(esc:5)
     edit.save()
     sleep(150ms)
-    key(cmd-w)
+    user.vscode("workbench.action.closeActiveEditor")
 
 # my first vscode-specific attempt at resizing splits
 split grow: user.vscode("workbench.action.increaseViewSize")
