@@ -120,6 +120,7 @@ ross node: rosnode
 ross param: rosparam
 ross pie: rospy
 ROS run: rosrun
+ROS serve: rossrv
 ROS service: rosservice
 ROS time: rostime
 ross topic: rostopic

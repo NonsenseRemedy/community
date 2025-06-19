@@ -79,6 +79,8 @@ nonsense
 # remotes:
 github
 github main
+gitlab
+gitlab main
 nonsense
 origin
 origin main
