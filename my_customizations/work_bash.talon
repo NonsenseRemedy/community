@@ -74,3 +74,11 @@ Lindzey at vespine:
 
 uv run [jupyterlab | jupyter lab | jupiter lab]:
     "uv run --with jupyter jupyter lab"
+
+pre commit install:
+    "pre-commit install"
+    key(enter)
+
+pre commit run:
+    "pre-commit run --all-files"
+    key(enter)
