@@ -27,19 +27,26 @@ bagfile
 ballotini
 Bashar si: bashrc
 Bedmap
+Bujold
 Candice
 captcha
 catkin
 ChArUco
 CI
 sea make: cmake
+cmake lists: CMakeLists
 COLDEX
 coreXY
 CReSIS
+"CReSIS's"
 cryosphere
+CSV
 CUI
+de two: d2
 debounce
 debounced
+detangle
+detectron
 DOI
 dpad
 dvc
@@ -50,11 +57,15 @@ Gamburtsev
 gamepad
 gaze OCR: gaze-ocr
 gee lunch: Glunch
+GeoDataFrame
+geopackage
+geopandas
 graal
 graals
 grep
 grepping
 GUI
+H five pie: h5py
 hackily
 holonomic
 hyenine
@@ -88,13 +99,16 @@ parchoffis
 passthrough
 Pilchuck
 plotly
+pointcloud
 Pratt
 punty
 pie plot: pyplot
-pointcloud
+pie proj: pyproj
+pyQGIS
 punties
 QGIS
-cue ice radar: QIceRadar
+cu Greenland: QGreenland
+cu ice radar: QIceRadar
 Quantarctica
 are one: R1
 are two: R2
@@ -152,6 +166,7 @@ Tobii
 TODO
 trisect
 unmute
+unconformities
 USB
 UTIG
 URDF
@@ -163,6 +178,7 @@ vespine
 you dub: UW
 vert
 "VSCode's"
+XML
 YAML
 yawl: "y'all"
 Zenodo
