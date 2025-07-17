@@ -18,10 +18,10 @@ start testbed manip:
     "./start_testbed_manip.sh"
 
 enable testbed:
-    "rosservice call /testbed/enable_all 'enable: true'"
+    "rosservice call /testbed/testbed/enable_all 'enable: true'"
 
 disable testbed:
-    "rosservice call /testbed/enable_all 'enable: false'"
+    "rosservice call /testbed/testbed/enable_all 'enable: false'"
 
 redirect:
     " 2>&1 | tee -a ~/output.txt && echo `history 1` | cut -d' ' -f2- >> ~/output.txt"
@@ -81,4 +81,36 @@ pre commit install:
 
 pre commit run:
     "pre-commit run --all-files"
+    key(enter)
+
+pixi noetic:
+    "pixi shell -e noetic"
+    key(enter)
+
+pixi jazzy:
+    "pixi shell -e jazzy"
+    key(enter)
+
+pixi install:
+    "pixi install"
+    key(enter)
+
+pixi add [<user.prose>]:
+    message = prose or ""
+    "pixi add {message} "
+
+export master hyenine:
+    "export ROS_MASTER_URI=http://hyenine:11311"
+    key(enter)
+
+export master vespine:
+    "export ROS_MASTER_URI=http://vespine:11311"
+    key(enter)
+
+export master totten:
+    "export ROS_MASTER_URI=http://totten:11311"
+    key(enter)
+
+export master nansen:
+    "export ROS_MASTER_URI=http://nansen:11311"
     key(enter)

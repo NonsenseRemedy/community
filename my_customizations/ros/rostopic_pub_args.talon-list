@@ -1,0 +1,9 @@
+list: user.rostopic_pub_args
+-
+
+file: --file=
+help: --help
+latch: --latch
+once: --once
+use rostime: --use-rostime
+verbose: --verbose

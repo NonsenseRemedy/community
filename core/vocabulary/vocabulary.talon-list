@@ -125,6 +125,7 @@ remoted
 repos
 Rina
 "Rina's"
+robostack
 rondel
 rondels
 row pose: ROPOS
@@ -134,6 +135,7 @@ ross cd: roscd
 ROS control: ros_control
 ross core: roscore
 ross dep: rosdep
+ROS launch: roslaunch
 ROS log: roslog
 ross message: rosmsg
 ross node: rosnode
@@ -173,6 +175,7 @@ URDF
 you you ID: UUID
 you you ideas: UUIDs
 uv
+vcstool
 venv
 vespine
 you dub: UW

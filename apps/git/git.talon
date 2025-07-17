@@ -20,8 +20,8 @@ git status$:
     "git status"
     key(enter)
 git add patch$:
-    "git add --patch"
-    key(enter)
+    "git add --patch "
+    # key(enter)
 git show head$:
     "git show HEAD"
     key(enter)
@@ -46,6 +46,9 @@ git log long$:
     key(enter)
 
 # Convenience
+git add (this | that):
+    text = edit.selected_text()
+    "git add {text}"
 git checkout (this | that):
     text = edit.selected_text()
     "git checkout {text}"

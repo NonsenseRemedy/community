@@ -17,3 +17,11 @@ uv activate:
 
 uv add:
     "uv add "
+
+uv add <user.prose>$:
+    "uv add {prose} "
+
+uv remove:
+    "uv remove "
+uv remove <user.prose>$:
+    "uv remove {prose} "
