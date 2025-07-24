@@ -28,6 +28,7 @@ settings():
     user.code_public_variable_formatter = "SNAKE_CASE"
 
 #python-specific grammars
+dunder file: "__file__"
 dunder in it: "__init__"
 dunder name: "__name__"
 dunder main: "__main__"

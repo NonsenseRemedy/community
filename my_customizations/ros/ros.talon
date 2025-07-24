@@ -47,3 +47,6 @@ vcs fetch:
 
 vcs status:
     "vcs status \n"
+
+mon launch:
+    "mon launch "
