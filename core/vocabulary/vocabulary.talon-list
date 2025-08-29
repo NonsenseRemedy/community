@@ -35,6 +35,7 @@ ChArUco
 CI
 sea make: cmake
 cmake lists: CMakeLists
+colcon
 COLDEX
 coreXY
 CReSIS
@@ -48,6 +49,7 @@ debounced
 detangle
 detectron
 DOI
+downsampled
 dpad
 dvc
 enum
@@ -71,6 +73,7 @@ holonomic
 hyenine
 i three: i3
 ID
+IMU
 iPython
 Jakuba
 Jamin
@@ -85,6 +88,7 @@ manip
 manip workspace: manip_ws
 marvering
 marvered
+microSWIFT
 moile
 moveit
 murrini
@@ -118,6 +122,7 @@ radioglaciology
 Rango
 README
 RC
+reachability
 Recurser
 Recursers
 Reichenbach
