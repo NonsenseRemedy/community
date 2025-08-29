@@ -13,6 +13,11 @@ param: " --"
 param <user.prose>: " --{prose}"
 
 dir: "cd "
+
+mypy: "mypy "
+
+ripgrep: "rg "
+
 # LEL Added 6 March 2025; "\n" doesn't work for a newline on zsh, so use explicit key. or maybe it sometimes works? I'm confused...
 dir up:
     "cd .."

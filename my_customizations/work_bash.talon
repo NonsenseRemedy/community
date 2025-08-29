@@ -91,6 +91,10 @@ pixi jazzy:
     "pixi shell -e jazzy"
     key(enter)
 
+pixi kilted:
+    "pixi shell -e kilted"
+    key(enter)
+
 pixi install:
     "pixi install"
     key(enter)
