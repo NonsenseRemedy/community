@@ -1,0 +1,13 @@
+list: user.jj_argument
+-
+
+# Global options
+at operation: --at-operation
+color always: "--color always"
+debug: --debug
+help: --help
+ignore immutable: --ignore-immutable
+ignore working copy: --ignore-working-copy
+no pager: --no-pager
+quiet: --quiet
+repository: --repository

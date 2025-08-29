@@ -39,7 +39,8 @@ git diff (cached | cashed)$:
     "git diff --cached"
     key(enter)
 git log$:
-    "git log --graph -300 --all --color --oneline --decorate"
+    "git log --oneline --graph --decorate --decorate-refs-exclude=refs/jj --exclude=refs/jj/* --all -300"
+    # "git log --graph -300 --all --color --oneline --decorate"
     key(enter)
 git log long$:
     "git log"
