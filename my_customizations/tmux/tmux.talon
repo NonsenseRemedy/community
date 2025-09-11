@@ -70,12 +70,24 @@ tag: user.bash
     "choose-tree"
     key(enter)
 
-# On hyenineI have set this to be turned on by default
+# On hyenine, I have set this to be turned on by default
 # by adding a line to ~/.tmux.conf
 (mux | tmux) mouse dog:
     key(ctrl-b)
     key(:)
     "set -g mouse"
+    key(enter)
+
+(mux | tmux) mouse on:
+    key(ctrl-b)
+    key(:)
+    "set -g mouse on"
+    key(enter)
+
+(mux | tmux) mouse off:
+    key(ctrl-b)
+    key(:)
+    "set -g mouse off"
     key(enter)
 
 # matching the sense of the community split commands, where "vert"

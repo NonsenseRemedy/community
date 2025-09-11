@@ -31,11 +31,20 @@ JJ push origin:
 JJ push origin <user.prose>:
     "jj git push --allow-new --remote origiplay, trapn --bookmark {prose}"
 
+JJ edit:
+    "jj edit "
+
+JJ rebase:
+    "jj rebase --destination "
+
 JJ split:
     "jj split"
 
+JJ status:
+    "jj status"
+
 JJ new:
-    "jj new"
+    "jj new "
 
 JJ show:
     "jj show "

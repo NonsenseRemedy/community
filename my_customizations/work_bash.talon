@@ -17,6 +17,14 @@ start testbed manip:
     "cd ~/manip_ws/src/raven_manip_sw/launch/launch_scripts \n"
     "./start_testbed_manip.sh"
 
+start docking:
+    "cd ~/docking_ws/src/docking_launch/launch/launch_scripts \n"
+    "./start_docking.sh"
+
+start lindzey docking:
+    "cd ~/lindzey/docking_ws/src/docking_launch/launch/launch_scripts \n"
+    "./start_docking.sh"
+
 enable testbed:
     "rosservice call /testbed/testbed/enable_all 'enable: true'"
 
@@ -56,6 +64,13 @@ zerotier join desktop:
 #      but for now, doing it the easy way that I know how
 activate dvc:
     "source ~/environments/dvc/bin/activate"
+    key(enter)
+
+git commit Laura:
+    "git commit --author \"Laura Lindzey <lindzey@uw.edu>\""
+
+cat git config:
+    "cat .git/config"
     key(enter)
 
 # TODO: this should probably use an environment variable to find the root data directory. For now, this only works on my desktop at home
