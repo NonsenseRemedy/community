@@ -22,11 +22,13 @@ API
 APL
 AprilTag
 AprilTags
+ardusub
 AUV
 bagfile
 ballotini
 Bashar si: bashrc
 Bedmap
+BlueROV
 Bujold
 Candice
 captcha
@@ -72,6 +74,7 @@ hackily
 holonomic
 hyenine
 i three: i3
+I too see: I2C
 ID
 IMU
 iPython
@@ -88,6 +91,8 @@ manip
 manip workspace: manip_ws
 marvering
 marvered
+mavlink
+mavros
 microSWIFT
 moile
 moveit
@@ -130,6 +135,7 @@ remoted
 repos
 Rina
 "Rina's"
+ripgrep
 robostack
 rondel
 rondels
@@ -157,6 +163,7 @@ rviz
 Scarlett
 Schack
 scipy
+setpoint
 shortcat
 Shuai
 Schweiz: "Shuai's"
@@ -172,6 +179,7 @@ tmux
 Tobii
 TODO
 trisect
+you art: UART
 unmute
 unconformities
 USB
