@@ -1,4 +1,4 @@
-mode: command
+mode: face
 # enabling the facial recognition really ups talon's CPU usage
 -
 
