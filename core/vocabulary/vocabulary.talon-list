@@ -44,6 +44,7 @@ CReSIS
 "CReSIS's"
 cryosphere
 CSV
+CubeIDE
 CUI
 de two: d2
 debounce
@@ -56,6 +57,7 @@ dpad
 dvc
 enum
 ea stop: E-stop
+fileX
 Focusrite
 Gamburtsev
 gamepad
@@ -64,6 +66,7 @@ gee lunch: Glunch
 GeoDataFrame
 geopackage
 geopandas
+GPIO
 graal
 graals
 grep
@@ -102,6 +105,7 @@ NASA
 netCDF
 NOAA
 NSF
+nucleo
 envy blocks: nvblox
 OGIVE
 parchoffis
@@ -168,7 +172,10 @@ shortcat
 Shuai
 Schweiz: "Shuai's"
 Shure
-sock: Sauk
+# I couldn't figure out how to get this to be available
+# as a homophone but not the preferred recognition for "sock"
+# sock: Sauk
+SPI
 ssh
 supio
 supios
