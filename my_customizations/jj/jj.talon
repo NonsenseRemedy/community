@@ -29,13 +29,23 @@ JJ push origin:
     "jj git push --allow-new --remote origin --bookmark "
 
 JJ push origin <user.prose>:
-    "jj git push --allow-new --remote origiplay, trapn --bookmark {prose}"
+    "jj git push --allow-new --remote origin --bookmark {prose}"
+
+JJ abandon:
+    "jj abandon -r "
 
 JJ edit:
-    "jj edit "
+    "jj edit -r "
 
 JJ rebase:
     "jj rebase --destination "
+
+JJ rebase help:
+    "jj rebase --help "
+    key(enter)
+
+JJ restore:
+    "jj restore "
 
 JJ split:
     "jj split"
@@ -59,6 +69,12 @@ JJ config edit user:
     key(enter)
 
 # Since I can't get the lists to work right now, trying with just the common commands
+JJ bookmark create:
+    "jj bookmark create "
+
+JJ bookmark create <user.prose>:
+    "jj bookmark create {prose}"
+
 JJ bookmark set:
     "jj bookmark set "
 
