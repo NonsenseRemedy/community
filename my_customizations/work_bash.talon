@@ -21,6 +21,10 @@ start docking:
     "cd ~/docking_ws/src/docking_launch/launch/launch_scripts \n"
     "./start_docking.sh"
 
+start sim docking:
+    "cd ~/docking_ws/src/docking_launch/launch/launch_scripts \n"
+    "./start_sim_docking.sh"
+
 start lindzey docking:
     "cd ~/lindzey/docking_ws/src/docking_launch/launch/launch_scripts \n"
     "./start_docking.sh"
