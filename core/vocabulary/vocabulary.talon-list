@@ -6,6 +6,7 @@ under documented: under-documented
 nmap
 admin
 arete
+BobberOne
 Cisco
 Citrix
 VPN
@@ -23,10 +24,12 @@ APL
 AprilTag
 AprilTags
 ardusub
+args
 AUV
 bagfile
 ballotini
 Bashar si: bashrc
+baud
 Bedmap
 BlueROV
 Bujold
@@ -97,6 +100,7 @@ marvering
 marvered
 mavlink
 mavros
+mcap
 microSWIFT
 moile
 moveit
@@ -132,6 +136,7 @@ radioglaciology
 Rango
 README
 RC
+RCL pie: rclpy
 reachability
 Recurser
 Recursers
@@ -151,6 +156,7 @@ ross cd: roscd
 ROS control: ros_control
 ross core: roscore
 ross dep: rosdep
+ross IDL: rosidl
 ROS launch: roslaunch
 ROS log: roslog
 ross message: rosmsg
@@ -165,6 +171,7 @@ ross topic: rostopic
 ROV
 rqt
 rviz
+SBD
 Scarlett
 Schack
 scipy
