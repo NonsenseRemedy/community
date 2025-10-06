@@ -5,7 +5,7 @@ app.name: STM32CubeIDE
     key(super-f11)
 
 [cube] (resume | continue):
-    key(super-f8)
+    key(f8)
 
 [cube] [step] into:
     key(f5)
@@ -31,7 +31,7 @@ app.name: STM32CubeIDE
     key(super-shift-b)
 
 [cube] build:
-    key(super-shift-p)
+    key(cmd-b)
 
 [cube] build all:
     key(super-b)
