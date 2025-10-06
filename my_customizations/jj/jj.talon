@@ -46,6 +46,9 @@ JJ push origin <user.prose>:
 JJ abandon:
     "jj abandon -r "
 
+JJ abandon last:
+    "jj abandon -r @-"
+
 JJ edit:
     "jj edit -r "
 
@@ -97,10 +100,6 @@ JJ bookmark set:
 
 JJ bookmark set <user.prose>:
     "jj bookmark set {prose}"
-
-JJ git fetch:
-    "jj git fetch"
-    key(enter)
 
 # jj {user.jj_command} [user.jj_argument]:
 #     args = jj_argument or ""
