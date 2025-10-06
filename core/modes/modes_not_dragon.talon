@@ -20,13 +20,14 @@ not speech.engine: dragon
 
 key(alt-left):
     speech.toggle()
+#     speech.enable()
 
- # We define this *only* if the speech engine isn't Dragon, because if you're using Dragon,
- # "wake up" is used to specifically control Dragon, and not affect Talon.
- #
- # It's a useful and well known command, though, so if you're using any other speech
- # engine, this controls Talon.
- ^(wake up)+$: speech.enable()
+# We define this *only* if the speech engine isn't Dragon, because if you're using Dragon,
+# "wake up" is used to specifically control Dragon, and not affect Talon.
+#
+# It's a useful and well known command, though, so if you're using any other speech
+# engine, this controls Talon.
+^(wake up)+$: speech.enable()
 
 # We define this *only* if the speech engine isn't Dragon, because if you're using Dragon,
 # "go to sleep" is used to specifically control Dragon, and not affect Talon.
@@ -40,7 +41,7 @@ key(alt-left):
     speech.disable()
 
     # borrowed from pokey rule. and maybe Andreas.
-+^drowse [<phrase>]$: speech.disable()
+^drowse [<phrase>]$: speech.disable()
 
 ^sleep all [<phrase>]$:
     user.switcher_hide_running()
