@@ -37,6 +37,9 @@ class CodeActions:
         if file_name in code_special_file_map:
             return code_special_file_map[file_name]
 
+        if "focus:[Terminal]" in actions.win.title():
+            return ""
+
         file_extension = actions.win.file_ext().lower()
         return extension_lang_map.get(file_extension, "")
 
