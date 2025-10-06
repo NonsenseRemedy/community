@@ -53,7 +53,7 @@ JJ edit:
     "jj edit -r "
 
 JJ rebase:
-    "jj rebase --destination "
+    "jj rebase "
 
 JJ rebase help:
     "jj rebase --help "
@@ -69,6 +69,9 @@ JJ squash last:
     "jj squash -r @-"
     key(enter)
 
+JJ squash:
+    "jj squash "
+
 JJ status:
     "jj status"
     key(enter)
@@ -77,7 +80,7 @@ JJ new:
     "jj new "
 
 JJ show:
-    "jj show "
+    "jj show -r "
 
 #############
 
@@ -126,6 +129,9 @@ JJ log:
 
 JJ describe:
     "jj describe -r "
+
+JJ describe last:
+    "jj describe -r @- "
 
 JJ describe help:
     "jj describe --help"
