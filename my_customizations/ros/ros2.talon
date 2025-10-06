@@ -127,7 +127,8 @@ ROS two service info:
 ############
 # TOPIC
 # NYI: bw, delay, echo, find, hz, pub, type
-ROS two topic list: "ros2 topic list"
+ROS two topic list:
+    "ros2 topic list"
     key(enter)
 
 ROS two topic list types:
