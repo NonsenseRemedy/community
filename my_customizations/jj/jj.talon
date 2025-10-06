@@ -18,8 +18,20 @@ JJ install docker:
     "jj config set --user ui.editor \"code -w\""
     key(enter)
 
+JJ bookmark track main at origin:
+    "jj bookmark track main@origin"
+    key(enter)
+
 JJ git init colocate:
     "jj git init --colocate"
+    key(enter)
+
+JJ git push:
+    "jj git push --allow-new -r "
+
+JJ git fetch:
+    "jj git fetch"
+    key(enter)
 
 JJ log all:
     "jj log -r ::"
@@ -50,8 +62,13 @@ JJ restore:
 JJ split:
     "jj split"
 
+JJ squash last:
+    "jj squash -r @-"
+    key(enter)
+
 JJ status:
     "jj status"
+    key(enter)
 
 JJ new:
     "jj new "
@@ -109,7 +126,7 @@ JJ log:
 # The "describe" command is pretty basic -- I think I'll wind up wanting argument lists for most of them.
 
 JJ describe:
-    "jj describe"
+    "jj describe -r "
 
 JJ describe help:
     "jj describe --help"

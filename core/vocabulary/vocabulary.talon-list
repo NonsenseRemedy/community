@@ -66,6 +66,7 @@ gee lunch: Glunch
 GeoDataFrame
 geopackage
 geopandas
+GNSS
 GPIO
 graal
 graals

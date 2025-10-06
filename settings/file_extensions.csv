@@ -51,6 +51,7 @@ File extension,Name
 .log,dot log
 .git,dot get
 # my extensions (kept separate from now on so I can alphabetize them)
+.action,dot action
 .bag,dot bag
 .bashrc,dot bashrc
 .d2,dot de two
@@ -63,6 +64,7 @@ File extension,Name
 .msg,dot message
 .pkl,dot pickle
 .repos,dot repos
+.rs,dot rust
 .tex,dot tech
 .xml,dot XML
 .yaml,dot YAML
