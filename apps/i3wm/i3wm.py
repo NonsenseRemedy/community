@@ -1,6 +1,6 @@
 import subprocess
 import time
-from typing import Optional
+from typing import Optional, Union
 
 from talon import Context, Module, actions, settings, ui
 
