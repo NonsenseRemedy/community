@@ -143,29 +143,29 @@ class Actions:
         """Launch a shell"""
         # key = settings.get("user.i3_terminal_key")
         # actions.key(key)
-         key = settings.get("user.i3_mod_key")
-         actions.key(f"{key}-enter")
+        key = settings.get("user.i3_mod_key")
+        actions.key(f"{key}-enter")
 
-     def i3wm_focus(what: str):
-         """Move focus"""
-         subprocess.check_call(("i3-msg", "focus", what))
+    def i3wm_focus(what: str):
+        """Move focus"""
+        subprocess.check_call(("i3-msg", "focus", what))
 
-     def i3wm_switch_to_workspace(which: Union[str, int]):
-         """Focus the specified workspace"""
-         if isinstance(which, int):
-             subprocess.check_call(("i3-msg", "workspace", "number", str(which)))
-         else:
-             subprocess.check_call(("i3-msg", "workspace", which))
+    def i3wm_switch_to_workspace(which: Union[str, int]):
+        """Focus the specified workspace"""
+        if isinstance(which, int):
+            subprocess.check_call(("i3-msg", "workspace", "number", str(which)))
+        else:
+            subprocess.check_call(("i3-msg", "workspace", which))
 
-     def i3wm_show_scratchpad():
-         """Focus/cycle/hide the scratchpad"""
-         subprocess.check_call(("i3-msg", "scratchpad", "show"))
+    def i3wm_show_scratchpad():
+        """Focus/cycle/hide the scratchpad"""
+        subprocess.check_call(("i3-msg", "scratchpad", "show"))
 
-     def i3wm_move(to: str):
-         """Move the focused container"""
-         subprocess.check_call(("i3-msg", "move", to))
+    def i3wm_move(to: str):
+        """Move the focused container"""
+        subprocess.check_call(("i3-msg", "move", to))
 
-     def i3wm_move_to_workspace(which: Union[str, int]):
+    def i3wm_move_to_workspace(which: Union[str, int]):
         """Move the focused container to the specified workspace"""
         if isinstance(which, int):
             subprocess.check_call((
@@ -187,18 +187,26 @@ class Actions:
                 which,
             ))
 
-     def i3wm_move_to_output(which: str):
-         """Move the focused container to the specified output."""
-         subprocess.check_call(("i3-msg", "move", "container", "to", "output", which))
+    def i3wm_move_to_output(which: str):
+        """Move the focused container to the specified output."""
+        subprocess.check_call(("i3-msg", "move", "container", "to", "output", which))
 
-     def i3wm_move_position(where: str):
-         """Move the focused container to the specified position."""
-         subprocess.check_call(("i3-msg", "move", "position", where))
 
-     def i3wm_lock():
-         """Trigger the lock screen"""
-         key = settings.get("user.i3_mod_key")
-         actions.key(f"{key}-shift-x")
+
+
+
+    def i3wm_move_position(where: str):
+        """Move the focused container to the specified position."""
+        subprocess.check_call(("i3-msg", "move", "position", where))
+
+
+
+
+
+    def i3wm_lock():
+        """Trigger the lock screen"""
+        key = settings.get("user.i3_mod_key")
+        actions.key(f"{key}-shift-x")
 
     def i3wm_logout():
         """Trigger the lock screen"""
