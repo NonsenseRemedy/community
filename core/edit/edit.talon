@@ -104,3 +104,9 @@ scratcher: user.delete_word_left_n(1)
 scratcher <number_small> times: user.delete_word_left_n(number_small)
 swallow: user.delete_word_right_n(1)
 swallow <number_small> times: user.delete_word_right_n(number_small)
+
+# Even more from Pokey
+step: edit.word_right()
+step <number_small> times: user.words_right(number_small)
+drain: edit.word_left()
+drain <number_small> times: user.words_left(number_small)
