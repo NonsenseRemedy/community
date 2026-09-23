@@ -1,0 +1,3 @@
+python.talon:<br>__init__, "dunder in it", python
+python.talon:<br>__main__, "dunder main", python
+python.talon:<br>__name__, "dunder name", python

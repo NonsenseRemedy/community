@@ -1,0 +1,10 @@
+operators_math: (python context)<br>foo - foo, "word foo op minus word foo", operators
+operators_math: (python context)<br>foo + foo, "word foo op plus word foo", operators
+operators_math: (python context)<br>foo * foo, "word foo op times word foo", operators
+operators_math: (python context)<br>foo / foo, "word foo op divide word foo", operators
+operators_math: (python context)<br>foo // foo, "word foo op int divide word foo", operators
+operators_math: (python context)<br>foo % foo, "word foo op mod word foo", operators
+operators_math: (python context)<br>foo ** foo, "word foo op power word foo", operators
+operators_math: (python context)<br>foo and foo, "word foo op and word foo", operators
+operators_math: (python context)<br>foo not foo, "word foo op not word foo", operators
+

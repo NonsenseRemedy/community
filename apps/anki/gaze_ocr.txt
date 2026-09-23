@@ -1,0 +1,4 @@
+"gaze_ocr: <br> highlight the word 'gaze' in the following: <br> ", "select gaze", gaze_ocr
+"gaze_ocr: <br> place the cursor after the word 'gaze' in the following: <br> ", "(go after | post seen) gaze", gaze_ocr
+"gaze_ocr: <br> place the cursor before the word 'gaze' in the following: <br> ", "(go before |  seen) gaze", gaze_ocr
+"gaze_ocr: <br> highlight the words 'banana carrot daisy' in the following: <br> apple banana carrot daisy eggplant", "select banana through daisy", gaze_ocr

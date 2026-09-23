@@ -1,0 +1,9 @@
+"editor: <br> increase zoom level", "zoom in", "edit"
+"editor: <br> decrease zoom level", "zoom out", "edit"
+"editor: <br> reset zoom level", "zoom reset", "edit"
+"editor: <br> search for string within file", "find it", "edit"
+"editor: <br> alternative for 'page up'", "scroll up", "edit"
+"editor: <br> alternative for 'page down'", "scroll down", "edit"
+"editor: <br> alternative for 'page down'", "scroll down", "edit"
+
+# resume at line twenty of edit.talon

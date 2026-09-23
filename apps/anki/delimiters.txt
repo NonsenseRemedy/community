@@ -1,0 +1,7 @@
+create text:<br>(content), "round word content", delimiters
+create text:<br>"content", "quad word content", delimiters
+create text:<br>[content], "box word content", delimiters
+create text:<br>{content}, "curly word content", delimiters
+create text:<br>`content`, "skis word content", delimiters
+create text:<br>'content', "twin word content", delimiters
+create text:<br>\<content\>, "diamond word content", delimiters

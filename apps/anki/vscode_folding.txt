@@ -1,0 +1,8 @@
+"recursively fold entire file", "fold all", "VSCode folding"
+"recursively unfold entire file", "unfold all", "VSCode folding"
+"fold N-th level", "fold N<br>(for N in one-seven)<br>not recursive!", "VSCode folding"
+"fold smallest level containing cursor/selection", "fold that", "VSCode folding"
+"unfold smallest level containing cursor/selection", "unfold that", "VSCode folding"
+"recursively fold within smallest level containing cursor/selection", "fold those", "VSCode folding"
+"recursively unfold within smallest level containing cursor/selection", "unfold those", "VSCode folding"
+"fold/unfold block comments", "fold comments <br> (I can't get this to work in python)", "VSCode folding"

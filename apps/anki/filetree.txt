@@ -1,0 +1,18 @@
+"open talon-filetree in VSCode's sidebar", "bar tree", talon-filetree
+"talon-filetree:<br> open file", "tree [user.letter] <br> tree open [user.letter]", talon-filetree
+"talon-filetree:<br> toggle directory expansion", "tree [user.letter]", talon-filetree
+"talon-filetree:<br> toggle directory expansion, to depth of N", "tree [user.letter] [user.number]", talon-filetree
+"talon-filetree:<br> toggle parent directory", "tree parent [user.letter]", talon-filetree
+"talon-filetree:<br> fully collapse directory", "tree collapse [user.letter]", talon-filetree
+"talon-filetree:<br> move file or directory to selected directory", "tree move [user.letter] to [user.letter]", talon-filetree
+"talon-filetree:<br> move file or directory to project root directory", "tree move [user.letter] to root", talon-filetree
+"talon-filetree:<br> rename file", "tree rename [user.letter]", talon-filetree
+"talon-filetree:<br> create file or folder in specified directory", "tree create [user.letter]", talon-filetree
+"talon-filetree:<br> create file or folder alongside specified file", "tree create [user.letter]", talon-filetree
+"talon-filetree:<br> delete file", "tree delete [user.letter]", talon-filetree
+"talon-filetree:<br> highlight, but don't open, file", "tree select [user.letter]", talon-filetree
+"talon-filetree:<br> toggle display of git ignored files", "tree git", talon-filetree
+"talon-filetree:<br> collapse all folders", "tree collapse root", talon-filetree
+"talon-filetree:<br> highlight active file in tree sidebar", "tree current", talon-filetree
+"talon-filetree:<br> use VSCode's search to find [text] inside [directory]", "tree hunt [directory] for [text]", talon-filetree
+

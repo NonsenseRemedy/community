@@ -1,0 +1,8 @@
+operators_math_comparison: (python context)<br> a == b, "air is equal bat", operators
+operators_math_comparison: (python context)<br> a != b, "air is not equal that", operators
+operators_math_comparison: (python context)<br> a > b, "air is greater bat", operators
+operators_math_comparison: (python context)<br> a < b, "air is less bat", operators
+operators_math_comparison: (python context)<br> a >= b, "air is greater or equal bat", operators
+operators_math_comparison: (python context)<br> a <= b, "air is less or equal bat", operators
+operators_math_comparison: (python context)<br> a in b, "air is in bat", operators
+operators_math_comparison: (python context)<br> a not in b, "air is not in bat", operators

@@ -1,0 +1,4 @@
+Using a word formatter, create text: <br> "text" <br> (without quotes);"word text"
+Using a word formatter, create text: <br> "text " <br> (without quotes);"trot text"
+Using a word formatter, create text: <br> "Text " <br> (without quotes);"leap text"
+Using a word formatter, create text: <br> "Text" <br> (without quotes);"proud text"

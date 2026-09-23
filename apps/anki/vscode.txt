@@ -1,0 +1,3 @@
+# "cursorless: <br> move cursor to line N above", "go up N-th <br> (use ordinal numbers for this)", "cursorless"
+# "cursorless: <br> move cursor to line N below", "go down N-th <br> (use ordinal numbers for this)", "cursorless"
+"cursorless: <br> move cursor to line N ", "go N <br> (use cardinal numbers for this)", "cursorless"

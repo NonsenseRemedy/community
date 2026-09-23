@@ -1,0 +1,18 @@
+"move current tab to neighboring split to the right", "split right", "splits.talon"
+"move current tab to neighboring split to the left", "split left", "splits.talon"
+"move current tab to neighboring split above", "split up", "splits.talon"
+"move current tab to neighboring split below", "split down", "splits.talon"
+"split current pane vertically", "split [vertical | vertically]", "splits.talon"
+"split current pane horizontally", "split [horizontal |horizontally]", "splits.talon"
+"go to N-th split", "go split [user.number]", "splits.talon"
+"make current split/pane largest", "split max", "splits.talon"
+"make all splits equal size", "split reset", "splits.talon"
+"remove current split, move tabs to next", "split clear", "splits.talon"
+"remove all splits, consolidate tabs", "split clear all", "splits.talon"
+"change focus to most recently visited split", "split last|next <br> (does not wrap; unidirectional)", "splits.talon"
+"create new vertical split, dividing window equally", "split window <br> (on the backend, this is identical to `split window vertically`)"`, "splits.talon"
+"flip split layout", "split flip", "splits.talon"
+"increase size of current split", "split grow", "vscode.talon, my changes"
+"decrease size of current split", "split shrink", "vscode.talon, my changes"
+
+
