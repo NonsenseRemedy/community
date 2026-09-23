@@ -18,7 +18,7 @@ not speech.engine: dragon
 
 ^talon wake [<phrase>]$: speech.enable()
 
-key(alt-left):
+key(left-up):
     speech.toggle()
 #     speech.enable()
 
