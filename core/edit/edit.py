@@ -157,3 +157,27 @@ class Actions:
         actions.edit.line_end()
         actions.key(symbol)
         actions.edit.line_insert_down()
+
+    # And, from Pokey to enable "north <number> times"
+    def down_n(n: int):
+        """Goes down n lines"""
+        for _ in range(n):
+            actions.edit.down()
+            actions.sleep("10ms")
+
+    def up_n(n: int):
+        """Goes up n lines"""
+        for _ in range(n):
+            actions.edit.up()
+            actions.sleep("10ms")
+
+    def left_n(n: int):
+        """Goes left n lines"""
+        for _ in range(n):
+            actions.edit.left()
+
+    def right_n(n: int):
+        """Goes right n lines"""
+        for _ in range(n):
+            actions.edit.right()
+

@@ -87,3 +87,13 @@ file save: edit.save()
 file save all: edit.save_all()
 
 [go] line mid: user.line_middle()
+
+# From Pokey
+tug: edit.left()
+tug <number_small> times: user.left_n(number_small)
+push: edit.right()
+push <number_small> times: user.right_n(number_small)
+north: edit.up()
+north <number_small> times: user.up_n(number_small)
+south: edit.down()
+south <number_small> times: user.down_n(number_small)
