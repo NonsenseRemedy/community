@@ -88,7 +88,7 @@ file save all: edit.save_all()
 
 [go] line mid: user.line_middle()
 
-# From Pokey
+# From Pokey; I'm tired of saying "go left\right|up|down <N> times"
 tug: edit.left()
 tug <number_small> times: user.left_n(number_small)
 push: edit.right()
@@ -97,3 +97,10 @@ north: edit.up()
 north <number_small> times: user.up_n(number_small)
 south: edit.down()
 south <number_small> times: user.down_n(number_small)
+
+# From Pokey; I'm not sure how often I'll use these, since I mostly
+# edit in VSCode where I can say "chuck (previous) N tokens (<target>)"
+scratcher: user.delete_word_left_n(1)
+scratcher <number_small> times: user.delete_word_left_n(number_small)
+swallow: user.delete_word_right_n(1)
+swallow <number_small> times: user.delete_word_right_n(number_small)

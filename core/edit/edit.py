@@ -181,3 +181,15 @@ class Actions:
         for _ in range(n):
             actions.edit.right()
 
+    # From pokey, to enable "scratcher" and "swallow"
+    def delete_word_left_n(n: int):
+        """Delete left n words"""
+        for _ in range(n):
+            actions.edit.extend_word_left()
+        actions.edit.delete()
+
+    def delete_word_right_n(n: int):
+        """Delete right n words"""
+        for _ in range(n):
+            actions.edit.extend_word_right()
+        actions.edit.delete()
