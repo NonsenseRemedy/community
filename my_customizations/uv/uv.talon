@@ -1,4 +1,5 @@
 tag: user.bash
+tag: user.zsh
 -
 
 uv init:
@@ -25,3 +26,6 @@ uv remove:
     "uv remove "
 uv remove <user.prose>$:
     "uv remove {prose} "
+
+uv run with jupiter:
+    "uv run --with jupyter jupyter lab"
